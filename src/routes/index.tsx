@@ -9,6 +9,7 @@ import {
 import { PageLayout } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
+import { DomesticAnimals, WildAnimals } from "@/components/site/AnimalStats";
 import heroDog from "@/assets/hero-dog.jpg";
 import rescueCow from "@/assets/rescue-cow.jpg";
 import rescueKitten from "@/assets/rescue-kitten.jpg";
@@ -54,6 +55,7 @@ function Index() {
     <PageLayout>
       <HeroSlider />
       <AboutPreview />
+      <VideoSection />
       <DomesticAnimals />
       <WildAnimals />
       <MissionStats />
@@ -62,11 +64,8 @@ function Index() {
       <Welfare />
       <ContributeFor />
       <MissionGoals />
-      <VideoSection />
       <Testimonials />
       <Partners />
-      <Newsletter />
-      <CtaBanner />
     </PageLayout>
   );
 }
@@ -197,84 +196,6 @@ function AboutPreview() {
   );
 }
 
-/* ---------------- Domestic Animals ---------------- */
-const domestic = [
-  { name: "Dogs", count: "6,847", emoji: "🐕" },
-  { name: "Cats", count: "3,160", emoji: "🐈" },
-  { name: "Cattle", count: "20,000+", emoji: "🐄" },
-  { name: "Buffalo", count: "2,684", emoji: "🐃" },
-  { name: "Camels", count: "970", emoji: "🐪" },
-  { name: "Donkeys", count: "235", emoji: "🫏" },
-  { name: "Horses", count: "186", emoji: "🐎" },
-  { name: "Pigeons", count: "9853", emoji: "🕊️" },
-];
-
-function DomesticAnimals() {
-  return (
-    <section className="py-20 md:py-24 bg-secondary">
-      <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Lives saved</p>
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">Domestic Animals & Birds</h2>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {domestic.map((a, i) => (
-            <Reveal key={a.name} delay={i * 0.05}>
-              <div className="bg-card text-card-foreground rounded-2xl p-6 text-center shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all">
-                <div className="text-5xl">{a.emoji}</div>
-                <p className="mt-3 font-semibold text-foreground">{a.name}</p>
-                <p className="text-primary font-semibold text-lg">{a.count}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- Wild Animals ---------------- */
-const wild = [
-  { name: "Sloth Bears", count: "2", emoji: "🐻" },
-  { name: "Nilgai", count: "1", emoji: "🦌" },
-  { name: "Snakes", count: "4,167", emoji: "🐍" },
-  { name: "Turtles", count: "47", emoji: "🐢" },
-];
-
-function WildAnimals() {
-  return (
-    <section className="py-20 md:py-24">
-      <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Wildlife</p>
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">Wild Animals Rescued</h2>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {wild.map((a, i) => (
-            <Reveal key={a.name} delay={i * 0.05}>
-              <div className="bg-card text-card-foreground rounded-2xl p-6 text-center shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all">
-                <div className="text-5xl">{a.emoji}</div>
-                <p className="mt-3 font-semibold text-foreground">{a.name}</p>
-                <p className="text-primary font-semibold text-lg">{a.count}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.3}>
-          <div className="mt-8 bg-card text-card-foreground rounded-2xl p-6 text-center shadow-soft">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Also rescued:</strong> Parakeets, Koels, Eagles, Sparrows, Crows, Indian Rollers, Owls, Peacocks, Raptors, Kingfishers, Green Bee-Eaters, Yellow-Footed Green Pigeons, Little Egrets, Swifts, Indian Robins, Hoopoes, Sunbirds etc. — <strong className="text-primary">3,169</strong> additional lives.
-            </p>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
 
 /* ---------------- Mission Stats ---------------- */
 const stats = [
@@ -426,18 +347,20 @@ function Welfare() {
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {welfare.map((w, i) => (
             <Reveal key={w.title} delay={i * 0.1}>
-              <article className="group bg-card rounded-3xl overflow-hidden border border-border shadow-soft hover:shadow-elegant transition-all h-full">
-                <div className="aspect-video overflow-hidden">
-                  <img src={w.img} alt={w.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="p-7">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
-                    <w.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-5 text-2xl font-semibold text-foreground">{w.title}</h3>
-                  <p className="mt-2 text-muted-foreground leading-relaxed">{w.desc}</p>
-                </div>
-              </article>
+              <Link to="/causes" className="block h-full cursor-pointer">
+                <article className="group bg-card rounded-3xl overflow-hidden border border-border shadow-soft hover:shadow-elegant transition-all h-full">
+                  <div className="aspect-video overflow-hidden">
+                    <img src={w.img} alt={w.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div className="p-7">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
+                      <w.icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-5 text-2xl font-semibold text-foreground">{w.title}</h3>
+                    <p className="mt-2 text-muted-foreground leading-relaxed">{w.desc}</p>
+                  </div>
+                </article>
+              </Link>
             </Reveal>
           ))}
         </div>
@@ -467,11 +390,13 @@ function ContributeFor() {
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-5">
           {contributeFor.map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 border-accent shadow-soft">
-                <img src={c.img} alt={c.label} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 to-transparent" />
-                <p className="absolute bottom-4 left-4 text-background font-semibold text-lg">{c.label}</p>
-              </div>
+              <Link to="/causes" className="block cursor-pointer">
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 border-accent shadow-soft">
+                  <img src={c.img} alt={c.label} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 to-transparent" />
+                  <p className="absolute bottom-4 left-4 text-background font-semibold text-lg">{c.label}</p>
+                </div>
+              </Link>
             </Reveal>
           ))}
         </div>
@@ -616,53 +541,3 @@ function Partners() {
   );
 }
 
-/* ---------------- Newsletter ---------------- */
-function Newsletter() {
-  return (
-    <section className="py-20 md:py-24">
-      <div className="mx-auto max-w-5xl px-5 lg:px-8">
-        <Reveal>
-          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-soft flex flex-col md:flex-row md:items-center gap-8">
-            <div className="flex-1">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Stay connected</p>
-              <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-foreground">Subscribe to our newsletter</h2>
-              <p className="mt-3 text-muted-foreground">Receive the latest rescues, events and ways to help — straight to your inbox.</p>
-            </div>
-            <form className="flex flex-col sm:flex-row w-full md:w-auto gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" required placeholder="your@email.com" className="w-full sm:flex-1 md:w-72 rounded-full border border-border bg-background px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
-              <button type="submit" className="w-full sm:w-auto rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90 transition">Submit</button>
-            </form>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- CTA ---------------- */
-function CtaBanner() {
-  return (
-    <section className="pb-24 md:pb-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-primary text-primary-foreground p-10 md:p-16 shadow-elegant">
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary-foreground/10 blur-2xl" />
-            <div className="absolute -left-10 -bottom-20 h-64 w-64 rounded-full bg-primary-foreground/5 blur-2xl" />
-            <div className="relative max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-semibold text-balance">₹500 feeds and treats one rescued animal for a week.</h2>
-              <p className="mt-5 text-lg text-primary-foreground/85 text-balance">Every rupee goes directly into food, medicine and ambulance fuel. Be a part of the next rescue.</p>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Link to="/donate" className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3.5 text-base font-semibold hover:scale-105 transition shadow-elegant">
-                  Donate Today <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3.5 text-base font-semibold hover:bg-primary-foreground/10 transition">
-                  Volunteer with us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}

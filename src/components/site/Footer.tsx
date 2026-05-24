@@ -65,8 +65,24 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest text-background">Stay Connected</h4>
-          <p className="mt-4 text-sm text-background/70">Follow us for rescue stories and updates.</p>
-          <div className="mt-4 flex gap-3">
+          <p className="mt-4 text-sm text-background/70 leading-relaxed">
+            Subscribe to our newsletter to receive the latest rescue stories and updates.
+          </p>
+          <form className="mt-4 flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="email"
+              required
+              placeholder="your@email.com"
+              className="w-full rounded-xl border border-background/20 bg-background/10 text-background px-4 py-2.5 text-xs placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary-glow transition"
+            />
+            <button
+              type="submit"
+              className="w-full rounded-xl bg-background text-foreground px-4 py-2.5 text-xs font-semibold hover:bg-background/90 transition cursor-pointer"
+            >
+              Subscribe
+            </button>
+          </form>
+          <div className="mt-6 flex gap-3">
             <a href="https://www.facebook.com/ghspca.ap" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-primary transition"><FbIcon className="h-4 w-4" /></a>
             <a href="https://www.instagram.com/ghspca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-primary transition"><IgIcon className="h-4 w-4" /></a>
           </div>

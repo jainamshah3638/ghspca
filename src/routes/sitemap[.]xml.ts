@@ -7,7 +7,15 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const paths = ["/", "/about", "/impact", "/causes", "/donate", "/contact"];
+        const blogPaths = [
+          "/blog",
+          "/blog/5-simple-ways-you-can-help-stray-animals",
+          "/blog/protecting-our-avian-friends-from-kite-strings",
+          "/blog/behind-the-scenes-a-day-in-the-life-of-spca-rescue",
+          "/blog/why-adopting-an-indie-animal-will-change-your-life",
+          "/blog/the-truth-about-street-dog-populations-abc-vaccinations"
+        ];
+        const paths = ["/", "/about", "/impact", "/causes", "/donate", "/contact", ...blogPaths];
         const urls = paths
           .map(
             (p) =>

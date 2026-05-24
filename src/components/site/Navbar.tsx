@@ -10,6 +10,7 @@ const links = [
   { to: "/impact", label: "Impact" },
   { to: "/causes", label: "Causes" },
   { to: "/gallery", label: "Our Work" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

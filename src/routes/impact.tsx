@@ -3,6 +3,7 @@ import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import { Heart, Ambulance, Globe } from "lucide-react";
+import { DomesticAnimals, WildAnimals } from "@/components/site/AnimalStats";
 
 export const Route = createFileRoute("/impact")({
   component: ImpactPage,
@@ -54,6 +55,9 @@ function ImpactPage() {
           </div>
         </div>
       </section>
+
+      <DomesticAnimals />
+      <WildAnimals />
 
       {/* Main Content Section */}
       <section className="bg-cream py-24 md:py-32">
