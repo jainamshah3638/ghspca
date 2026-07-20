@@ -11,8 +11,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import { DomesticAnimals, WildAnimals } from "@/components/site/AnimalStats";
 import heroDog from "@/assets/hero-dog.jpg";
-import rescueCow from "@/assets/rescue-cow.jpg";
-import rescueKitten from "@/assets/rescue-kitten.jpg";
 import multiSpeciality from "@/assets/Multi-Speciality.webp";
 import ambulance from "@/assets/ambulance.jpg";
 import welfareBird from "@/assets/welfare/bird.jpg";
@@ -22,12 +20,7 @@ import contributeMedical from "@/assets/contribute/3 (1).png";
 import contributeSnake from "@/assets/contribute/4.png";
 import contributeShelter from "@/assets/contribute/5.png";
 import contributeCattle from "@/assets/contribute/6.png";
-import causeCamel from "@/assets/cause-camel.jpg";
 import banner2 from "@/assets/banner2.png";
-import heroSnake from "@/assets/hero-snake.png";
-import causeSnake from "@/assets/cause-snake.jpg";
-import causeBirds from "@/assets/cause-birds.jpg";
-import causeCattle from "@/assets/cause-cattle.jpg";
 import partner1 from "@/assets/partners/org5.jpg";
 import partner2 from "@/assets/partners/org.jpg";
 import partner3 from "@/assets/partners/org1.png";
@@ -77,12 +70,6 @@ const slides = [
     eyebrow: "24/7 Ambulance Service",
     title: "Every life is worth saving.",
     desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 33,759 animals and birds across India — free of cost.",
-  },
-  {
-    img: heroSnake,
-    eyebrow: "Volunteers Needed",
-    title: "Lend a hand for snakes this Nag Panchami.",
-    desc: "Let's save snakes by rescuing them from snake charmers. We do have expertise. Snake handlers support. So join us & help us to help snakes.",
   },
   {
     img: ambulance,
