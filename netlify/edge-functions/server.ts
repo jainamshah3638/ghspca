@@ -14,6 +14,7 @@ export const config = {
     "/*.svg",
     "/*.ico",
     "/*.webmanifest",
-    "/*.txt"
+    "/*.txt",
+    "/*.mp3"
   ]
 };
