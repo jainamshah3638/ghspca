@@ -29,7 +29,7 @@ export function BackgroundMusic() {
 
   /* ── Create audio on mount ── */
   useEffect(() => {
-    const audio = new Audio("/namami-nemi.mp3");
+    const audio = new Audio("/nemras-instrumental.mp3");
     audio.loop = true;
     audio.volume = 1;
     audioRef.current = audio;

@@ -79,20 +79,22 @@ function ContactPage() {
               <ContactItem icon={MapPin} label="Contact Address" value={
                 <span className="text-base font-normal leading-relaxed text-muted-foreground block mt-1">
                   <strong className="text-foreground font-semibold">GREATER HYDERABAD SOCIETY FOR PREVENTION OF CRUELTY TO ANIMALS</strong><br />
-                  16-6-374, NOOR KHAN BAZAR<br />
-                  HYDERABAD TELANGANA- 500024
+                  9FC9+G96, Muslim Jung Brg, Shakar Bazaar,<br />
+                  Afzal Gunj, Hyderabad, Telangana 500012
                 </span>
               } />
 
               <div className="rounded-3xl overflow-hidden border border-border shadow-soft aspect-[4/3]">
                 <iframe
-                  title="GHSPCA location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2006946.7034112508!2d77.99934772614064!3d10.748522889398519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab9e5a966d90d%3A0x7ca4a032f222bf06!2sSociety%20for%20Prevention%20of%20Cruelty%20to%20Animals%20(SPCA)!5e0!3m2!1sen!2sin!4v1779027425486!5m2!1sen!2sin"
+                  title="GHSPCA Multi-Speciality Animal Hospital and Shelter"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.84296297795!2d78.4684005!3d17.3712879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb970049a19a5f%3A0xdd3dc4e63cb80a70!2sGHSPCA%20Multi-Speciality%20Animal%20Hospital%20and%20Shelter!5e0!3m2!1sen!2sin!4v1788005654617!5m2!1sen!2sin"
                   className="h-full w-full border-0"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
+
+                
               </div>
             </div>
           </Reveal>

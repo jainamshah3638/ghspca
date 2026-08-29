@@ -41,7 +41,72 @@ function DonatePage() {
         subtitle="100% of your donation goes into food, medicine, surgery and ambulance fuel. Every service we provide is free of cost to the public."
       />
 
-      <section className="py-20 md:py-28">
+      {/* Where your money goes */}
+      <section className="bg-cream py-24 md:py-32">
+        <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Where your money goes</p>
+              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-balance">Real impact, transparently broken down.</h2>
+            </div>
+          </Reveal>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {impactList.map((i, idx) => (
+              <Reveal key={i.amount} delay={idx * 0.08}>
+                <div className="bg-card border border-border rounded-3xl p-7 shadow-soft h-full">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
+                    <i.icon className="h-5 w-5" />
+                  </span>
+                  <p className="mt-5 text-3xl font-semibold text-foreground">{i.amount}</p>
+                  <p className="mt-2 text-muted-foreground">{i.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Schemes */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Our Schemes</p>
+              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-balance">Become a lifelong patron of GHSPCA.</h2>
+              <p className="mt-5 text-lg text-muted-foreground">
+                Join our <span className="font-semibold text-foreground">"Mujhe Bachao – Save Me"</span> startup donation schemes and help us build a permanent hospital & shelter for rescued animals.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {schemes.map((s, idx) => (
+              <Reveal key={s.tier} delay={idx * 0.07}>
+                <div className="relative h-full rounded-3xl border border-border bg-card p-8 shadow-soft overflow-hidden">
+                  <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${s.accent}`} />
+                  <div className="flex items-center gap-3">
+                    <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                      <s.icon className="h-6 w-6" />
+                    </span>
+                    <h3 className="text-xl font-semibold">{s.tier}</h3>
+                  </div>
+                  <p className="mt-6 text-4xl font-semibold text-foreground">{s.amount}</p>
+                  <p className="mt-3 text-muted-foreground">{s.desc}</p>
+                  <a
+                    href="upi://pay?pa=9394578568@upi&pn=GHSPCA"
+                    className="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:bg-primary/90 transition"
+                  >
+                    Contribute {s.tier}
+                  </a>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Payment Details Section (Bank Transfer, UPI & QR Code) */}
+      <section className="bg-cream py-20 md:py-28">
         <div className="mx-auto max-w-[1600px] px-5 lg:px-8 grid lg:grid-cols-12 gap-6 lg:gap-10 items-start">
           
           <div className="lg:col-span-7 space-y-6">
@@ -101,85 +166,6 @@ function DonatePage() {
             </Reveal>
           </div>
 
-        </div>
-      </section>
-
-      <section className="bg-cream py-24 md:py-32">
-        <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Where your money goes</p>
-              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-balance">Real impact, transparently broken down.</h2>
-            </div>
-          </Reveal>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {impactList.map((i, idx) => (
-              <Reveal key={i.amount} delay={idx * 0.08}>
-                <div className="bg-card border border-border rounded-3xl p-7 shadow-soft h-full">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
-                    <i.icon className="h-5 w-5" />
-                  </span>
-                  <p className="mt-5 text-3xl font-semibold text-foreground">{i.amount}</p>
-                  <p className="mt-2 text-muted-foreground">{i.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Our Schemes</p>
-              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-balance">Become a lifelong patron of GHSPCA.</h2>
-              <p className="mt-5 text-lg text-muted-foreground">
-                Join our <span className="font-semibold text-foreground">"Mujhe Bachao – Save Me"</span> startup donation schemes and help us build a permanent hospital & shelter for rescued animals.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {schemes.map((s, idx) => (
-              <Reveal key={s.tier} delay={idx * 0.07}>
-                <div className="relative h-full rounded-3xl border border-border bg-card p-8 shadow-soft overflow-hidden">
-                  <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${s.accent}`} />
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
-                      <s.icon className="h-6 w-6" />
-                    </span>
-                    <h3 className="text-xl font-semibold">{s.tier}</h3>
-                  </div>
-                  <p className="mt-6 text-4xl font-semibold text-foreground">{s.amount}</p>
-                  <p className="mt-3 text-muted-foreground">{s.desc}</p>
-                  <a
-                    href="upi://pay?pa=9394578568@upi&pn=GHSPCA"
-                    className="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:bg-primary/90 transition"
-                  >
-                    Contribute {s.tier}
-                  </a>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.1}>
-            <div className="mt-12 rounded-3xl border border-border bg-secondary/40 p-8 md:p-10 text-center">
-              <p className="text-sm uppercase tracking-[0.25em] text-primary font-semibold">Amount of your choice</p>
-              <p className="mt-3 text-2xl md:text-3xl font-semibold text-balance">
-                Prefer a custom contribution? Every rupee directly funds rescue, medicine and shelter.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a href="upi://pay?pa=9394578568@upi&pn=GHSPCA" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90 transition">
-                  Donate via UPI
-                </a>
-                <a href="tel:+919394578568" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold hover:bg-secondary transition">
-                  Call +91 93945 78568
-                </a>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
     </PageLayout>

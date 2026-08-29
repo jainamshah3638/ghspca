@@ -11,7 +11,7 @@ const IgIcon = (p: React.SVGProps<SVGSVGElement>) => (
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background/90 mt-24">
+    <footer className="bg-foreground text-background/90">
       <div className="mx-auto max-w-[1600px] px-5 lg:px-8 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
@@ -43,8 +43,8 @@ export function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-1 shrink-0" /> 
               <span className="leading-relaxed">
-                16-6-374, NOOR KHAN BAZAR<br />
-                HYDERABAD, TELANGANA - 500024
+                9FC9+G96, Muslim Jung Brg, Shakar Bazaar,<br />
+                Afzal Gunj, Hyderabad, Telangana 500012
               </span>
             </li>
             <li className="flex items-start gap-2">

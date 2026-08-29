@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eye, Target, Users, ArrowRight, Heart, HeartHandshake, Phone } from "lucide-react";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
-import multiSpeciality from "@/assets/Multi-Speciality.webp";
+import multiSpeciality from "@/assets/ghscpc_hospital.webp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       { title: "About Us — GHSPCA" },
       { name: "description", content: "Learn about GHSPCA, our rescue efforts, and the dedicated team behind it all." },
       { property: "og:title", content: "About Us — GHSPCA" },
-      { property: "og:description", content: "Our story, mission and the team behind 33,759+ rescues." },
+      { property: "og:description", content: "Our story, mission and the team behind 55,000+ rescues." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -48,33 +48,33 @@ const coordinators = [
 const rescueHead = { name: "Taqi Ali", phone: "+91 7416705697" };
 
 const members = [
-  { name: "Akshat Porwar", phone: "+91 7893005500" },
-  { name: "Ajay Bharadwaj", phone: "+91 7773980263" },
-  { name: "Dharmik Shah", phone: "+91 8828354633" },
-  { name: "Luvkik Nahata", phone: "+91 9390246044" },
-  { name: "Parth Shah", phone: "+91 8019931027" },
-  { name: "Prateek Lodha", phone: "+91 9346649560" },
-  { name: "Vishal Kumar", phone: "+91 7794930816" },
-  { name: "Pranav Jain", phone: "+91 9666686093" },
-  { name: "Ganesh Bhai", phone: "+91 8142090111" },
-  { name: "Akshay Baldota", phone: "+91 9028869941" },
-  { name: "Akshat Choadhry", phone: "+91 9030810809" },
-  { name: "Deepak Agarwal", phone: "+91 9030878015" },
-  { name: "Nikhil Achaliya", phone: "+91 9989421341" },
-  { name: "Piyush Gandhi", phone: "+91 8977511221" },
-  { name: "Shubham Vyas", phone: "+91 7799357577" },
-  { name: "Sumeet Zotha", phone: "+91 9155212121" },
-  { name: "Sanjay Jain", phone: "+91 9440300215" },
-  { name: "Sunil Kumar", phone: "+91 9704110037" },
-  { name: "Ajay Surana", phone: "+91 9440759962" },
-  { name: "Amit Anchaliya", phone: "+91 9154707111" },
-  { name: "Jivesh Jain", phone: "+91 9989088100" },
-  { name: "Pankaj Gupta", phone: "+91 9490226105" },
-  { name: "Praful Bohra", phone: "+91 8722764564" },
-  { name: "Siddhum Bhandari", phone: "+91 9391345870" },
-  { name: "Yash Nahata", phone: "+91 6304688926" },
-  { name: "Deepesh Jain", phone: "+91 9347470754" },
-  { name: "B Naveen", phone: "+91 6301030700" },
+  { name: "Akshat Porwar" },
+  { name: "Ajay Bharadwaj" },
+  { name: "Dharmik Shah" },
+  { name: "Luvkik Nahata" },
+  { name: "Parth Shah" },
+  { name: "Prateek Lodha" },
+  { name: "Vishal Kumar" },
+  { name: "Pranav Jain" },
+  { name: "Ganesh Bhai" },
+  { name: "Akshay Baldota" },
+  { name: "Akshat Choadhry" },
+  { name: "Deepak Agarwal" },
+  { name: "Nikhil Achaliya" },
+  { name: "Piyush Gandhi" },
+  { name: "Shubham Vyas" },
+  { name: "Sumeet Zotha" },
+  { name: "Sanjay Jain" },
+  { name: "Sunil Kumar" },
+  { name: "Ajay Surana" },
+  { name: "Amit Anchaliya" },
+  { name: "Jivesh Jain" },
+  { name: "Pankaj Gupta" },
+  { name: "Praful Bohra" },
+  { name: "Siddhum Bhandari" },
+  { name: "Yash Nahata" },
+  { name: "Deepesh Jain" },
+  { name: "B Naveen" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -166,7 +166,7 @@ function AboutPage() {
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block bg-card border border-border rounded-3xl p-6 shadow-elegant max-w-sm">
                 <p className="text-xl font-semibold italic text-balance text-foreground">
-                  "Till date, 33,759 animals and birds are saved and count is increasing daily"
+                  "Till date, 55,000+ animals and birds are saved and count is increasing daily"
                 </p>
               </div>
             </div>
@@ -298,7 +298,7 @@ function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {members.map((m, i) => (
                 <Reveal key={m.name} delay={i * 0.03}>
-                  <SmallCard name={m.name} phone={m.phone} />
+                  <SmallCard name={m.name} />
                 </Reveal>
               ))}
             </div>

@@ -10,19 +10,19 @@ export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
       { title: "Our Impact — GHSPCA" },
-      { name: "description", content: "33,759+ animals rescued. 15 years of service. Explore GHSPCA's measurable impact for animal welfare in India." },
+      { name: "description", content: "55,000+ animals rescued. 18 years of service. Explore GHSPCA's measurable impact for animal welfare in India." },
       { property: "og:title", content: "Our Impact — GHSPCA" },
-      { property: "og:description", content: "Numbers, animals and milestones from 15 years of rescue work." },
+      { property: "og:description", content: "Numbers, animals and milestones from 18 years of rescue work." },
     ],
     links: [{ rel: "canonical", href: "/impact" }],
   }),
 });
 
 const headline = [
-  { value: 33759, label: "Total animals rescued", suffix: "+" },
-  { value: 15, label: "Years of service", suffix: "+" },
-  { value: 365, label: "Days/year ambulance" },
-  { value: 7, label: "States reached" },
+  { value: 18, label: "Years of service", suffix: "" },
+  { value: 55000, label: "Animals Rescued", suffix: "+" },
+  { value: 12, label: "States served", suffix: "" },
+  { value: 100, label: "Active Volunteers", suffix: " +" },
 ];
 
 const timeline = [
@@ -30,13 +30,13 @@ const timeline = [
   { year: "2012", title: "Network grows", desc: "Volunteers and professionals from different fields join the mission." },
   { year: "2019", title: "24/7 ambulance launched", desc: "Round-the-clock emergency rescue service begins operating 365 days a year." },
   { year: "2022", title: "Multi-state reach", desc: "Services expand to Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, UP." },
-  { year: "Today", title: "33,759+ rescues", desc: "And counting. Every single rescue free of cost to the public." },
+  { year: "Today", title: "55,000+ rescues", desc: "And counting. Every single rescue free of cost to the public." },
 ];
 
 function ImpactPage() {
   return (
     <PageLayout>
-      <PageHero eyebrow="Our Impact" title="Every number is a life that got a second chance." subtitle="Measurable, transparent results from 15+ years of on-ground rescue work across India." />
+      <PageHero eyebrow="Our Impact" title="Every number is a life that got a second chance." subtitle="Measurable, transparent results from 18+ years of on-ground rescue work across India." />
 
       {/* Stats Section */}
       <section className="py-20 md:py-24">
@@ -78,7 +78,7 @@ function ImpactPage() {
                       Awareness was spread among different community groups of the Deccan region. Based in Hyderabad, our expert team of volunteers work 24/7 from handling emergency calls to providing best possible treatment in no less time. We try maximum to bring the animals back to their natural habitat.
                     </p>
                     <p>
-                      We work as a team and as individuals responding to needs of cases to be dealt. It differs to harm caused to animals severity on a normal day than during festivals. The society is proud of its 15 years of service towards the speechless creatures. 
+                      We work as a team and as individuals responding to needs of cases to be dealt. It differs to harm caused to animals severity on a normal day than during festivals. The society is proud of its 18 years of service towards the speechless creatures. 
                     </p>
                     <p className="text-xl font-medium text-foreground italic border-l-4 border-primary pl-6 py-3">
                       "We love and enjoy doing so, the most important part is we provide all our services completely free of cost."
@@ -121,7 +121,7 @@ function ImpactPage() {
               <Reveal delay={0.3}>
                 <div className="bg-primary rounded-3xl p-6 sm:p-10 shadow-elegant text-primary-foreground text-center">
                   <Heart className="mx-auto h-10 w-10 mb-4 opacity-90" />
-                  <p className="text-4xl sm:text-5xl font-semibold mb-2 tracking-tight break-all sm:break-normal">33,759</p>
+                  <p className="text-4xl sm:text-5xl font-semibold mb-2 tracking-tight break-all sm:break-normal">55,000+</p>
                   <p className="text-primary-foreground/90 font-medium text-lg">
                     Animals and birds saved till date.
                   </p>

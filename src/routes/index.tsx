@@ -11,7 +11,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import { DomesticAnimals, WildAnimals } from "@/components/site/AnimalStats";
 import heroDog from "@/assets/hero-dog.jpg";
-import multiSpeciality from "@/assets/Multi-Speciality.webp";
+import multiSpeciality from "@/assets/ghscpc_hospital.webp";
 import ambulance from "@/assets/ambulance.jpg";
 import welfareBird from "@/assets/welfare/bird.jpg";
 import welfareWater from "@/assets/welfare/waterbowl.png";
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
       { title: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
       { name: "description", content: "Greater Hyderabad Society for Prevention of Cruelty to Animals. 24/7 animal rescue, rehabilitation and release across India since 2019." },
       { property: "og:title", content: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
-      { property: "og:description", content: "Since 2019, GHSPCA has rescued 33,759+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
+      { property: "og:description", content: "Since 2019, GHSPCA has rescued 55,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -48,9 +48,9 @@ function Index() {
     <PageLayout>
       <HeroSlider />
       <AboutPreview />
-      <VideoSection />
       <DomesticAnimals />
       <WildAnimals />
+      <VideoSection />
       <MissionStats />
       <ContributeWays />
       <HomelessBanner />
@@ -69,25 +69,35 @@ const slides = [
     img: heroDog,
     eyebrow: "24/7 Ambulance Service",
     title: "Every life is worth saving.",
-    desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 33,759 animals and birds across India — free of cost.",
+    desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 55,000 animals and birds across India — free of cost.",
+    duration: 7000,
   },
   {
     img: ambulance,
     eyebrow: "Emergency Rescue",
     title: "One call away. Anywhere. Anytime.",
     desc: "Our trained team responds to injured, trapped and abandoned animals — round the clock, all year round.",
+    duration: 7000,
+  },
+  {
+    img: multiSpeciality,
+    hideText: true,
+    duration: 15000, // 15 seconds for Slide 3
   },
 ];
 
 function HeroSlider() {
   const [i, setI] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setI((p) => (p + 1) % slides.length), 6000);
-    return () => clearInterval(t);
-  }, []);
+    const slideDuration = slides[i].duration || 8000;
+    const timer = setTimeout(() => {
+      setI((prev) => (prev + 1) % slides.length);
+    }, slideDuration);
+    return () => clearTimeout(timer);
+  }, [i]);
   const s = slides[i];
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-foreground">
+    <section className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden bg-foreground">
       <AnimatePresence mode="wait">
         <motion.div
           key={i}
@@ -97,42 +107,48 @@ function HeroSlider() {
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
-          <img src={s.img} alt={s.title} className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/55 to-foreground/15" />
+          <img src={s.img} alt={s.title ?? "GHSPCA Hospital"} className="h-full w-full object-cover" />
+          {!s.hideText && (
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/55 to-foreground/15" />
+          )}
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative mx-auto max-w-[1600px] w-full px-5 lg:px-8 pt-32 pb-24">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl text-background"
-          >
-            <span className="inline-flex items-center gap-2 rounded-full bg-background/15 backdrop-blur px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em]">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-glow animate-pulse" /> {s.eyebrow}
-            </span>
-            <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.05] text-balance">
-              {s.title}
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-background/85 max-w-xl text-balance">{s.desc}</p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link to="/donate" className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-elegant hover:bg-primary/90 transition-all">
-                Donate Now <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
-              </Link>
-              <a href="tel:+919394578568" className="inline-flex items-center gap-2 rounded-full bg-background/15 backdrop-blur border border-background/30 px-6 py-3.5 text-base font-semibold text-background hover:bg-background/25 transition">
-                <PhoneCall className="h-4 w-4" /> Emergency: 93945 78568
-              </a>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+      <div className="relative mx-auto max-w-[1600px] w-full px-5 lg:px-8 pt-32 pb-12 flex-1 flex flex-col justify-between z-10 pointer-events-none">
+        <div className="flex-1 flex items-center pointer-events-auto">
+          <AnimatePresence mode="wait">
+            {!s.hideText && (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                className="max-w-2xl text-background"
+              >
+                <span className="inline-flex items-center gap-2 rounded-full bg-background/15 backdrop-blur px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary-glow animate-pulse" /> {s.eyebrow}
+                </span>
+                <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.05] text-balance">
+                  {s.title}
+                </h1>
+                <p className="mt-6 text-lg md:text-xl text-background/85 max-w-xl text-balance">{s.desc}</p>
+                <div className="mt-10 flex flex-wrap gap-3">
+                  <Link to="/donate" className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-elegant hover:bg-primary/90 transition-all">
+                    Donate Now <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                  </Link>
+                  <a href="tel:+919394578568" className="inline-flex items-center gap-2 rounded-full bg-background/15 backdrop-blur border border-background/30 px-6 py-3.5 text-base font-semibold text-background hover:bg-background/25 transition">
+                    <PhoneCall className="h-4 w-4" /> Emergency: 93945 78568
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         {/* Controls */}
-        <div className="mt-16 flex items-center gap-4">
-          <button onClick={() => setI((p) => (p - 1 + slides.length) % slides.length)} className="grid h-11 w-11 place-items-center rounded-full bg-background/15 backdrop-blur border border-background/30 text-background hover:bg-background/25 transition" aria-label="Previous slide">
+        <div className="flex items-center gap-4 pointer-events-auto">
+          <button onClick={() => setI((p) => (p - 1 + slides.length) % slides.length)} className="grid h-11 w-11 place-items-center rounded-full bg-background/20 backdrop-blur border border-background/30 text-background hover:bg-background/35 transition" aria-label="Previous slide">
             <ChevronLeft className="h-5 w-5" />
           </button>
           <div className="flex gap-2">
@@ -140,7 +156,7 @@ function HeroSlider() {
               <button key={idx} onClick={() => setI(idx)} aria-label={`Slide ${idx + 1}`} className={`h-1.5 rounded-full transition-all ${idx === i ? "w-10 bg-primary-glow" : "w-4 bg-background/40"}`} />
             ))}
           </div>
-          <button onClick={() => setI((p) => (p + 1) % slides.length)} className="grid h-11 w-11 place-items-center rounded-full bg-background/15 backdrop-blur border border-background/30 text-background hover:bg-background/25 transition" aria-label="Next slide">
+          <button onClick={() => setI((p) => (p + 1) % slides.length)} className="grid h-11 w-11 place-items-center rounded-full bg-background/20 backdrop-blur border border-background/30 text-background hover:bg-background/35 transition" aria-label="Next slide">
             <ChevronRight className="h-5 w-5" />
           </button>
         </div>
@@ -158,7 +174,7 @@ function AboutPreview() {
           <div className="relative">
             <img src={multiSpeciality} alt="Multi-Speciality Care" loading="lazy" className="rounded-3xl shadow-elegant object-cover h-auto w-full" />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-card border border-border rounded-2xl p-5 shadow-elegant max-w-xs">
-              <p className="text-3xl font-semibold text-primary"><Counter value={15} suffix="+" /></p>
+              <p className="text-3xl font-semibold text-primary"><Counter value={18} suffix="+" /></p>
               <p className="text-sm text-muted-foreground mt-1">Years of dedicated service to voiceless lives.</p>
             </div>
           </div>
@@ -172,7 +188,7 @@ function AboutPreview() {
             The Greater Hyderabad Society for Prevention of Cruelty to Animals (GHSPCA) was founded in 2008 by a handful of compassionate volunteers. Today, we run a 24/7 emergency ambulance and serve animals across Telangana, Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan and Uttar Pradesh.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Over <strong className="text-foreground">33,759</strong> animals saved and counting — every one of them treated with dignity, free of cost.
+            Over <strong className="text-foreground">55,000</strong> animals saved and counting — every one of them treated with dignity, free of cost.
           </p>
           <Link to="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
             Learn our story <ArrowRight className="h-4 w-4" />
@@ -186,10 +202,10 @@ function AboutPreview() {
 
 /* ---------------- Mission Stats ---------------- */
 const stats = [
-  { value: 33759, label: "Total Rescues", suffix: "+" },
-  { value: 2256, label: "Animals Treated", suffix: "+" },
-  { value: 1000, label: "Got Shelter", suffix: "+" },
-  { value: 260, label: "Adapted Rescued", suffix: "+" },
+  { value: 18, label: "Years of service", suffix: "" },
+  { value: 55000, label: "Animals Rescued", suffix: "+" },
+  { value: 12, label: "States served", suffix: "" },
+  { value: 100, label: "Active Volunteers", suffix: " +" },
 ];
 
 function MissionStats() {
@@ -197,25 +213,37 @@ function MissionStats() {
     <section className="bg-foreground text-background py-20 md:py-24">
       <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
         <Reveal>
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary-glow">Our Mission</p>
             <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-balance">
               Helping all animals and birds — treating them equally.
             </h2>
           </div>
         </Reveal>
-        <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((s, i) => (
-            <Reveal key={s.label} delay={i * 0.1}>
-              <div className="border-t border-background/20 pt-6 text-center md:text-left">
-                <p className="text-5xl md:text-6xl font-semibold tracking-tight">
-                  <Counter value={s.value} suffix={s.suffix} />
-                </p>
-                <p className="mt-3 text-sm text-background/70">{s.label}</p>
+
+        <Reveal delay={0.1}>
+          <div className="border-t border-background/20 pt-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-background/20 gap-8 lg:gap-0">
+              {stats.map((s, i) => (
+                <div key={s.label} className={`text-center md:text-left ${i !== 0 ? "lg:pl-8" : ""} ${i !== stats.length - 1 ? "lg:pr-8" : ""}`}>
+                  <p className="text-5xl md:text-6xl font-semibold tracking-tight font-serif">
+                    <Counter value={s.value} suffix={s.suffix} />
+                  </p>
+                  <p className="mt-3 text-sm text-background/80 font-medium">{s.label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm text-background/70">
+              <div>
+                <a href="mailto:ghspca.hyderabad@gmail.com" className="hover:text-background transition-colors">ghspca.hyderabad@gmail.com</a>
+                <span className="mx-3 opacity-50">|</span>
+                <a href="tel:+919394578568" className="hover:text-background transition-colors">+91 93945 78568</a>
               </div>
-            </Reveal>
-          ))}
-        </div>
+              <p>9FC9+G96, Muslim Jung Brg, Shakar Bazaar, Afzal Gunj, Hyderabad, Telangana 500012</p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

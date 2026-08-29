@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
       { name: "description", content: "Greater Hyderabad Society for Prevention of Cruelty to Animals. 24/7 animal rescue, rehabilitation and release across India since 2019." },
       { property: "og:title", content: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
-      { property: "og:description", content: "Since 2019, GHSPCA has rescued 33,759+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
+      { property: "og:description", content: "Since 2019, GHSPCA has rescued 55,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@GHSPCA" },

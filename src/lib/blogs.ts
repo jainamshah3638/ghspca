@@ -1,7 +1,7 @@
 import heroDog from "@/assets/hero-dog.jpg";
 import rescueCow from "@/assets/rescue-cow.jpg";
 import rescueKitten from "@/assets/rescue-kitten.jpg";
-import multiSpeciality from "@/assets/Multi-Speciality.webp";
+import multiSpeciality from "@/assets/ghscpc_hospital.webp";
 import ambulance from "@/assets/ambulance.jpg";
 import causeBirds from "@/assets/cause-birds.jpg";
 
