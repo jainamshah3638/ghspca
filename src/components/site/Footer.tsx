@@ -30,6 +30,7 @@ export function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-widest text-background">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="hover:text-primary-glow">About Us</Link></li>
+            <li><Link to="/hospital" className="hover:text-primary-glow">Hospital Facilities</Link></li>
             <li><Link to="/impact" className="hover:text-primary-glow">Our Impact</Link></li>
             <li><Link to="/causes" className="hover:text-primary-glow">Causes</Link></li>
             <li><Link to="/donate" className="hover:text-primary-glow">Donate</Link></li>

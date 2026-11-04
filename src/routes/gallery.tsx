@@ -86,13 +86,6 @@ function GalleryPage() {
               View on Instagram
             </a>
           </Reveal>
-
-          <Reveal delay={0.2}>
-            {/* INSTRUCTION: Paste your Elfsight or LightWidget Embed code below */}
-            <div className="mt-16 min-h-[400px] bg-white rounded-3xl border border-border shadow-soft flex items-center justify-center p-8 relative overflow-hidden">
-
-            </div>
-          </Reveal>
         </div>
       </section>
     </PageLayout>

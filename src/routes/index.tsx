@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
-  ArrowRight, PhoneCall, ShieldCheck, Stethoscope, TreePine, Play, Quote,
+  ArrowRight, PhoneCall, ShieldCheck, Stethoscope, TreePine, Quote,
   Heart, HandHeart, IndianRupee, PawPrint, Home, Stethoscope as Hospital,
-  Utensils, Droplets, Bird, Syringe, ChevronLeft, ChevronRight, Handshake,
+  Droplets, Bird, Syringe, ChevronLeft, ChevronRight, Handshake,
 } from "lucide-react";
 import { PageLayout } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
@@ -50,7 +50,6 @@ function Index() {
       <AboutPreview />
       <DomesticAnimals />
       <WildAnimals />
-      <VideoSection />
       <MissionStats />
       <ContributeWays />
       <HomelessBanner />
@@ -190,9 +189,14 @@ function AboutPreview() {
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Over <strong className="text-foreground">55,000</strong> animals saved and counting — every one of them treated with dignity, free of cost.
           </p>
-          <Link to="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
-            Learn our story <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            <Link to="/about" className="inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
+              Learn our story <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link to="/hospital" className="inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
+              Explore our hospital <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </Reveal>
       </div>
     </section>
@@ -327,10 +331,6 @@ function HomelessBanner() {
 
             <div className="flex flex-col sm:flex-row lg:flex-col gap-6 w-full lg:w-80 relative z-10">
               <div className="bg-background/10 hover:bg-background/15 border border-background/20 rounded-3xl p-6 backdrop-blur-md transition-colors">
-                <p className="text-4xl font-semibold text-primary-glow mb-2">₹500</p>
-                <p className="text-sm text-background/80 leading-relaxed">Provides life-saving medicine and nutritious meals for an injured rescue for an entire week.</p>
-              </div>
-              <div className="bg-background/10 hover:bg-background/15 border border-background/20 rounded-3xl p-6 backdrop-blur-md transition-colors">
                 <p className="text-4xl font-semibold text-primary-glow mb-2">50+</p>
                 <p className="text-sm text-background/80 leading-relaxed">Emergency rescues are conducted by our dedicated ambulance team every single day.</p>
               </div>
@@ -345,8 +345,8 @@ function HomelessBanner() {
 /* ---------------- Welfare ---------------- */
 const welfare = [
   { icon: Bird, title: "Free Bird Feeders", desc: "Free bird feeders distributed every year to homes and communities.", img: welfareBird },
-  { icon: Droplets, title: "Free Water Bowls", desc: "Water bowls for thirsty animals placed across neighbourhoods.", img: welfareWater },
-  { icon: Syringe, title: "Free Vaccination Drive", desc: "Free vaccination drives organised throughout the year.", img: welfareVaccine },
+  { icon: Droplets, title: "Free Water Bowls for Strays", desc: "Water bowls for thirsty stray dogs and street animals placed across neighbourhoods.", img: welfareWater },
+  { icon: Syringe, title: "Free Stray Dog Vaccination Drive", desc: "Free vaccination drives for stray dogs and street animals organised throughout the year.", img: welfareVaccine },
 ];
 
 function Welfare() {
@@ -386,10 +386,10 @@ function Welfare() {
 
 /* ---------------- Contribute For ---------------- */
 const contributeFor = [
-  { img: contributeMedical, label: "Animal Shelter" },
-  { img: contributeSnake, label: "Free Animal Checkups" },
-  { img: contributeShelter, label: "Animal Hospital" },
-  { img: contributeCattle, label: "Free Treatment of Animals" },
+  { img: contributeMedical, label: "Animal Shelter", to: "/causes" },
+  { img: contributeSnake, label: "Free Stray Animal Checkups", to: "/causes" },
+  { img: contributeShelter, label: "Animal Hospital", to: "/hospital" },
+  { img: contributeCattle, label: "Free Treatment of Stray Animals", to: "/causes" },
 ];
 
 function ContributeFor() {
@@ -405,7 +405,7 @@ function ContributeFor() {
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-5">
           {contributeFor.map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
-              <Link to="/causes" className="block cursor-pointer">
+              <Link to={c.to} className="block cursor-pointer">
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border-2 border-accent shadow-soft">
                   <img src={c.img} alt={c.label} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 to-transparent" />
@@ -426,8 +426,7 @@ const goals = [
   { icon: ShieldCheck, label: "Animal Rescue" },
   { icon: Hospital, label: "Hospital Setup" },
   { icon: TreePine, label: "Shelter Setup" },
-  { icon: Utensils, label: "Food Charities" },
-  { icon: Stethoscope, label: "Free Animal Treatment" },
+  { icon: Stethoscope, label: "Free Stray Animal Treatment" },
 ];
 
 function MissionGoals() {
@@ -451,32 +450,6 @@ function MissionGoals() {
               </div>
             </Reveal>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- Video ---------------- */
-function VideoSection() {
-  return (
-    <section className="py-24 md:py-32 bg-cream">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Stories from the field</p>
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">See a rescue come to life</h2>
-          </div>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="mt-12 relative aspect-video rounded-3xl overflow-hidden shadow-elegant border border-border">
-            <iframe src="https://www.youtube.com/embed/JBHhjXHhBsY" title="Animal rescue story" className="absolute inset-0 h-full w-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-          </div>
-        </Reveal>
-        <div className="mt-6 flex justify-center">
-          <a href="https://www.youtube.com/@ghspca" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all">
-            <Play className="h-4 w-4" /> Watch more on YouTube
-          </a>
         </div>
       </div>
     </section>

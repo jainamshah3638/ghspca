@@ -4,6 +4,10 @@ import rescueKitten from "@/assets/rescue-kitten.jpg";
 import multiSpeciality from "@/assets/ghscpc_hospital.webp";
 import ambulance from "@/assets/ambulance.jpg";
 import causeBirds from "@/assets/cause-birds.jpg";
+import causeSnake from "@/assets/cause-snake.jpg";
+import kiteBird from "@/assets/cause/Kite.png";
+import ambulanceLaunch from "@/assets/blog/ambulance-launch.jpg";
+import birdRescue from "@/assets/blog/bird-rescue.jpg";
 
 export interface BlogPostSection {
   type: "paragraph" | "heading" | "list" | "quote";
@@ -300,6 +304,243 @@ export const blogs: BlogPost[] = [
       text: "Sponsor a Sterilization & Vaccine",
       link: "/donate",
       secondaryText: "Request an RWA Drive",
+      secondaryLink: "/contact"
+    }
+  },
+  {
+    slug: "maneka-gandhi-launches-new-ghspca-animal-ambulance",
+    title: "Maneka Gandhi Launches a New GHSPCA Animal Ambulance in Hyderabad",
+    excerpt: "Our chief patron flagged off a new animal ambulance, launched a donation scheme and inspected progress on our multi-speciality animal hospital at Begum Bazaar.",
+    category: "In the Press",
+    readTime: "3 min read",
+    date: "Mar 29, 2026",
+    author: "GHSPCA Team",
+    img: ambulanceLaunch,
+    content: [
+      {
+        type: "paragraph",
+        content: "GHSPCA's work was featured in Telangana Today on 29 March 2026. Our chief patron, animal activist and former MP Maneka Gandhi, visited Hyderabad to launch a new GHSPCA animal ambulance and to commence a new donation scheme in support of our rescue work."
+      },
+      {
+        type: "heading",
+        content: "One More Ambulance on Hyderabad's Roads"
+      },
+      {
+        type: "paragraph",
+        content: "Every minute counts when an animal is injured on the road. The new ambulance adds to our ability to reach animals in distress quickly and bring them in for treatment. Anyone who sees an animal in need can call our helpline at 9394578568 — your call can save a life."
+      },
+      {
+        type: "heading",
+        content: "Progress on the Multi-Speciality Animal Hospital"
+      },
+      {
+        type: "paragraph",
+        content: "During the visit, Maneka Gandhi inspected the ongoing construction of GHSPCA's multi-speciality animal hospital and shelter at Begum Bazaar. She said that the long-pending construction work would be completed soon — a milestone that will let us treat and house far more animals under one roof."
+      },
+      {
+        type: "heading",
+        content: "Awareness Drives for Mahaveer Jayanti"
+      },
+      {
+        type: "paragraph",
+        content: "On the occasion of Mahaveer Jayanti, GHSPCA set up awareness stalls at Exhibition Ground, Nampally and Imperial Garden, Secunderabad, inviting citizens to learn about our work and join the donation drive."
+      },
+      {
+        type: "quote",
+        content: "GHSPCA chief patron Maneka Gandhi launching the ambulance. — Telangana Today, 29 March 2026"
+      },
+      {
+        type: "paragraph",
+        content: "None of this happens without our volunteers and supporters. Thank you to everyone in the GHSPCA team who turned out to make the day a success."
+      }
+    ],
+    cta: {
+      text: "Support Our Ambulance Service",
+      link: "/donate",
+      secondaryText: "Become a Volunteer",
+      secondaryLink: "/contact"
+    }
+  },
+  {
+    slug: "chinese-manja-threatens-birds-kite-safety-tips",
+    title: "Chinese Manja Threatens Birds: Why We Are Campaigning Against Glass-Coated Thread",
+    excerpt: "Last year over 150 birds were rescued from kite-string injuries, yet nearly half did not survive. Here is why glass-coated manja is so deadly, and how to fly kites safely.",
+    category: "In the Press",
+    readTime: "3 min read",
+    date: "Jan 10, 2026",
+    author: "GHSPCA Team",
+    img: kiteBird,
+    content: [
+      {
+        type: "paragraph",
+        content: "Ahead of the kite-flying season, Deccan Chronicle reported on 10 January 2026 that GHSPCA had shared a list of tips to make kite flying safer for birds, and launched awareness drives across Hyderabad against the use of Chinese manja and glass-coated thread."
+      },
+      {
+        type: "heading",
+        content: "The Hidden Cost of a Kite Festival"
+      },
+      {
+        type: "paragraph",
+        content: "Glass-coated thread is designed to cut other kites — and it cuts birds just as easily. Birds caught in it suffer deep wounds to their wings and bodies, often while the thread is still tangled around them."
+      },
+      {
+        type: "quote",
+        content: "Last year, over 150 birds were rescued, but nearly 50 per cent of them died during treatment due to the severity of injuries. — A veterinary doctor associated with GHSPCA"
+      },
+      {
+        type: "paragraph",
+        content: "According to our veterinary team, birds injured by glass-coated thread often take weeks to recover, as the wounds severely affect their wings and ability to fly. For many, the injuries are simply too severe to survive."
+      },
+      {
+        type: "heading",
+        content: "How You Can Fly Kites Responsibly"
+      },
+      {
+        type: "list",
+        content: [
+          "Use plain cotton thread instead of Chinese manja or glass-coated thread.",
+          "Avoid flying kites in the early morning and evening, when birds are most active.",
+          "Collect and safely dispose of broken or loose thread so it doesn't tangle on trees and wires.",
+          "If you find an injured bird, keep it in a ventilated box in a quiet place and call GHSPCA right away."
+        ]
+      },
+      {
+        type: "paragraph",
+        content: "A festival of joy shouldn't come at the cost of the birds we share our skies with. A small change in the thread you buy can save lives."
+      }
+    ],
+    cta: {
+      text: "Support Bird Rescue",
+      link: "/donate",
+      secondaryText: "Report an Injured Bird",
+      secondaryLink: "/contact"
+    }
+  },
+  {
+    slug: "indian-rollers-rescued-on-dasara",
+    title: "Indian Rollers Rescued on Dasara: Why Wild Birds Belong in the Wild",
+    excerpt: "During Dasara, GHSPCA rescued six Indian rollers (Palapitta) kept captive for the festival. Five were released into the Narsapur forest.",
+    category: "In the Press",
+    readTime: "3 min read",
+    date: "Oct 8, 2025",
+    author: "GHSPCA Team",
+    img: birdRescue,
+    content: [
+      {
+        type: "paragraph",
+        content: "The Indian roller, known locally as Palapitta, is the state bird of Telangana and is traditionally sighted during Dasara. Sadly, this tradition leads some people to trap and cage these birds so others can \"see\" them during the festival. Deccan Chronicle reported on 8 October 2025 that 14 Indian rollers were rescued in Hyderabad during the festival."
+      },
+      {
+        type: "heading",
+        content: "The Rescues"
+      },
+      {
+        type: "paragraph",
+        content: "GHSPCA rescued six Indian rollers, of which one died. The remaining five were released into the Narsapur forest. Separately, wildlife rescuers from Nehru Zoological Park and the police rescued eight more rollers; four of those birds died despite treatment, while four were released in the zoo's garden."
+      },
+      {
+        type: "heading",
+        content: "Captivity Weakens Wild Birds"
+      },
+      {
+        type: "paragraph",
+        content: "Many of the rescued birds were extremely weak when they were brought in. GHSPCA coordinator Soudharm Bhandari stressed that wild birds must be released into their natural habitat."
+      },
+      {
+        type: "quote",
+        content: "Prolonged confinement in cages severely weakens wild birds. — Dr Vishva Chaitany, Veterinarian"
+      },
+      {
+        type: "paragraph",
+        content: "As our veterinary team explained, the survival of a rescued bird depends on its health, the timing of the rescue and how it was handled. The sooner a captive bird is reported, the better its chances."
+      },
+      {
+        type: "heading",
+        content: "Celebrate Without Cages"
+      },
+      {
+        type: "list",
+        content: [
+          "Never buy or pay to see a caged Indian roller or any other wild bird.",
+          "If you see wild birds being sold or displayed, report it to GHSPCA or the Forest Department.",
+          "Share this message with family and friends before the festive season."
+        ]
+      }
+    ],
+    cta: {
+      text: "Support Wildlife Rescue",
+      link: "/donate",
+      secondaryText: "Report a Captive Bird",
+      secondaryLink: "/contact"
+    }
+  },
+  {
+    slug: "increased-awareness-leads-to-reduced-snake-cruelty",
+    title: "Increased Awareness Leads to Reduced Snake Cruelty During Naga Panchami",
+    excerpt: "Snake cruelty cases in Hyderabad have dropped sharply — from over 200 snakes rescued each Naga Panchami to just 11 in 2024. Here is how awareness made the difference.",
+    category: "In the Press",
+    readTime: "4 min read",
+    date: "Jul 25, 2025",
+    author: "GHSPCA Team",
+    img: causeSnake,
+    content: [
+      {
+        type: "paragraph",
+        content: "Metro India reported on 25 July 2025 that snake cruelty cases in Hyderabad have dropped considerably, thanks to growing awareness. According to GHSPCA coordinator Soudharm Bhandari, when we started this initiative 19 years ago, we were rescuing over 200 snakes each Naga Panchami. Thanks to persistent awareness campaigns and public cooperation, that number dropped dramatically to just 11 rescues in 2024."
+      },
+      {
+        type: "paragraph",
+        content: "Since 2005, GHSPCA has rescued a staggering 5,276 snakes from illegal captivity, public abuse, and near-certain death, especially during the Naga Panchami season."
+      },
+      {
+        type: "heading",
+        content: "The Most Misunderstood Species in the World"
+      },
+      {
+        type: "paragraph",
+        content: "Due to deep-rooted superstition during Naga Panchami, people feed milk to snakes whose bodies can't digest it, and decorate them with kumkum (vermilion) for money and spectacle. Snake charmers capture cobras and other species weeks ahead of the festival, often defanging them, crushing their venom glands and stitching their mouths shut, before keeping them in dark, airless boxes without food or water."
+      },
+      {
+        type: "paragraph",
+        content: "Contrary to popular opinion, not all snakes are dangerous — yet people often kill snakes on sight."
+      },
+      {
+        type: "quote",
+        content: "The Wildlife Protection Act, 1972 clearly prohibits the capture, possession, and public display of snakes. These actions are treated as serious criminal offences under non-bailable sections."
+      },
+      {
+        type: "heading",
+        content: "Volunteers on the Ground"
+      },
+      {
+        type: "paragraph",
+        content: "Each year, GHSPCA volunteers work alongside the Forest Department and animal welfare organisations such as People for Animals (PFA) to prevent snake abuse during the festival. Localities such as Shalibanda, Hussaini Alam, Gowlipura, Begum Bazar, Doodhbowli, Lal Darwaza, Ramkoti, Mogalpura and Kamatipura have been hotspots for snake-related cruelty in recent years. GHSPCA and PFA teams, equipped with rescue gear and veterinary support, actively patrol these areas during the festival."
+      },
+      {
+        type: "quote",
+        content: "We are not against the festival. We are against the pain inflicted on innocent creatures under the guise of tradition. — Soudharm Bhandari, GHSPCA"
+      },
+      {
+        type: "heading",
+        content: "Report Snake Cruelty"
+      },
+      {
+        type: "paragraph",
+        content: "We request all citizens to report any snake charmers they spot. To report snake cruelty or sightings during Naga Panchami, contact:"
+      },
+      {
+        type: "list",
+        content: [
+          "Telangana Forest Department: 1800 4255 364",
+          "GHSPCA: 88867 43881, 93945 78568",
+          "PFA: 90491 49601"
+        ]
+      }
+    ],
+    cta: {
+      text: "Support Snake Rescue",
+      link: "/donate",
+      secondaryText: "Report Snake Cruelty",
       secondaryLink: "/contact"
     }
   }

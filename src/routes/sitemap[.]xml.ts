@@ -15,7 +15,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           "/blog/why-adopting-an-indie-animal-will-change-your-life",
           "/blog/the-truth-about-street-dog-populations-abc-vaccinations"
         ];
-        const paths = ["/", "/about", "/impact", "/causes", "/donate", "/contact", ...blogPaths];
+        const paths = ["/", "/about", "/hospital", "/impact", "/causes", "/donate", "/contact", ...blogPaths];
         const urls = paths
           .map(
             (p) =>

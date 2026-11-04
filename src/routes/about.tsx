@@ -48,33 +48,41 @@ const coordinators = [
 const rescueHead = { name: "Taqi Ali", phone: "+91 7416705697" };
 
 const members = [
-  { name: "Akshat Porwar" },
   { name: "Ajay Bharadwaj" },
-  { name: "Dharmik Shah" },
-  { name: "Luvkik Nahata" },
-  { name: "Parth Shah" },
-  { name: "Prateek Lodha" },
-  { name: "Vishal Kumar" },
-  { name: "Pranav Jain" },
-  { name: "Ganesh Bhai" },
-  { name: "Akshay Baldota" },
-  { name: "Akshat Choadhry" },
-  { name: "Deepak Agarwal" },
-  { name: "Nikhil Achaliya" },
-  { name: "Piyush Gandhi" },
-  { name: "Shubham Vyas" },
-  { name: "Sumeet Zotha" },
-  { name: "Sanjay Jain" },
-  { name: "Sunil Kumar" },
   { name: "Ajay Surana" },
+  { name: "Akshat Choadhry" },
+  { name: "Akshat Porwar" },
+  { name: "Akshay Baldota" },
   { name: "Amit Anchaliya" },
-  { name: "Jivesh Jain" },
-  { name: "Pankaj Gupta" },
-  { name: "Praful Bohra" },
-  { name: "Siddhum Bhandari" },
-  { name: "Yash Nahata" },
-  { name: "Deepesh Jain" },
   { name: "B Naveen" },
+  { name: "Bhakti Bhandari" },
+  { name: "Deepak Agarwal" },
+  { name: "Deepesh Jain" },
+  { name: "Dhara Jain" },
+  { name: "Dharmik Shah" },
+  { name: "Ganesh Bhai" },
+  { name: "Jinesh Shah" },
+  { name: "Jivesh Jain" },
+  { name: "Kruti Shah" },
+  { name: "Luvkik Nahata" },
+  { name: "Nehal H" },
+  { name: "Nikhil Achaliya" },
+  { name: "Pankaj Gupta" },
+  { name: "Parth Shah" },
+  { name: "Piyush Gandhi" },
+  { name: "Praful Bohra" },
+  { name: "Pranav Jain" },
+  { name: "Prateek Lodha" },
+  { name: "Sanjay Jain" },
+  { name: "Shubham Vyas" },
+  { name: "Siddhum Bhandari" },
+  { name: "Siksha Jain" },
+  { name: "Sonal Anchaliya" },
+  { name: "Sucharita Shah" },
+  { name: "Sumeet Zotha" },
+  { name: "Sunil Kumar" },
+  { name: "Vishal Kumar" },
+  { name: "Yash Nahata" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -179,7 +187,7 @@ function AboutPage() {
                 Greater Hyderabad Society for Prevention of Cruelty to Animals (GHSPCA) an organization working for welfare of animals was started in 2008 by a few Animal Lovers. Lately, many other conservatives, professionals from different fields joined hands in order to rescue, rehabilitate, release and reduce cruelty on animals.
               </p>
               <p>
-                <strong className="text-foreground font-semibold">Our Impact:</strong> Not just Telangana, but many other states like Andhra Pradesh, Karnataka, Maharashtra, Gujrat, Rajsthan, Uttar Pradesh have been receiving our services. And so we keep spreading our wings of service in future.
+                <strong className="text-foreground font-semibold">Our Impact:</strong> Not just Telangana, but 11 other states — Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, Madhya Pradesh, Uttar Pradesh, Haryana, Jammu & Kashmir, Jharkhand and West Bengal — have been receiving our services. And so we keep spreading our wings of service in future.
               </p>
               <p>
                 Since 2019, we have a 24/7 ambulance service running 365 days for handling emergency cases and rehabilitating animals.
