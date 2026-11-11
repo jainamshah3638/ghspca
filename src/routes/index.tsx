@@ -207,7 +207,7 @@ function AboutPreview() {
 /* ---------------- Mission Stats ---------------- */
 const stats = [
   { value: 18, label: "Years of service", suffix: "" },
-  { value: 55000, label: "Animals Rescued", suffix: "+" },
+  { value: 61000, label: "Animals Rescued", suffix: "+" },
   { value: 12, label: "States served", suffix: "" },
   { value: 100, label: "Active Volunteers", suffix: " +" },
 ];
