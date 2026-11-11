@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
       { title: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
       { name: "description", content: "Greater Hyderabad Society for Prevention of Cruelty to Animals. 24/7 animal rescue, rehabilitation and release across India since 2019." },
       { property: "og:title", content: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
-      { property: "og:description", content: "Since 2019, GHSPCA has rescued 55,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
+      { property: "og:description", content: "Since 2019, GHSPCA has rescued 61,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -68,7 +68,7 @@ const slides = [
     img: heroDog,
     eyebrow: "24/7 Ambulance Service",
     title: "Every life is worth saving.",
-    desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 55,000 animals and birds across India — free of cost.",
+    desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 61,000 animals and birds across India — free of cost.",
     duration: 7000,
   },
   {
@@ -187,7 +187,7 @@ function AboutPreview() {
             The Greater Hyderabad Society for Prevention of Cruelty to Animals (GHSPCA) was founded in 2008 by a handful of compassionate volunteers. Today, we run a 24/7 emergency ambulance and serve animals across Telangana, Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan and Uttar Pradesh.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Over <strong className="text-foreground">55,000</strong> animals saved and counting — every one of them treated with dignity, free of cost.
+            Over <strong className="text-foreground">61,000</strong> animals saved and counting — every one of them treated with dignity, free of cost.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
             <Link to="/about" className="inline-flex items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">

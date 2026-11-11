@@ -10,7 +10,7 @@ export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
       { title: "Our Impact — GHSPCA" },
-      { name: "description", content: "55,000+ animals rescued. 18 years of service. Explore GHSPCA's measurable impact for animal welfare in India." },
+      { name: "description", content: "61,000+ animals rescued. 18 years of service. Explore GHSPCA's measurable impact for animal welfare in India." },
       { property: "og:title", content: "Our Impact — GHSPCA" },
       { property: "og:description", content: "Numbers, animals and milestones from 18 years of rescue work." },
     ],
@@ -30,7 +30,7 @@ const timeline = [
   { year: "2012", title: "Network grows", desc: "Volunteers and professionals from different fields join the mission." },
   { year: "2019", title: "24/7 ambulance launched", desc: "Round-the-clock emergency rescue service begins operating 365 days a year." },
   { year: "2022", title: "Multi-state reach", desc: "Services expand to Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, UP." },
-  { year: "Today", title: "55,000+ rescues", desc: "And counting. Every single rescue free of cost to the public." },
+  { year: "Today", title: "61,000+ rescues", desc: "And counting. Every single rescue free of cost to the public." },
 ];
 
 function ImpactPage() {
@@ -121,7 +121,7 @@ function ImpactPage() {
               <Reveal delay={0.3}>
                 <div className="bg-primary rounded-3xl p-6 sm:p-10 shadow-elegant text-primary-foreground text-center">
                   <Heart className="mx-auto h-10 w-10 mb-4 opacity-90" />
-                  <p className="text-4xl sm:text-5xl font-semibold mb-2 tracking-tight break-all sm:break-normal">55,000+</p>
+                  <p className="text-4xl sm:text-5xl font-semibold mb-2 tracking-tight break-all sm:break-normal">61,000+</p>
                   <p className="text-primary-foreground/90 font-medium text-lg">
                     Animals and birds saved till date.
                   </p>

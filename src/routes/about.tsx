@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       { title: "About Us — GHSPCA" },
       { name: "description", content: "Learn about GHSPCA, our rescue efforts, and the dedicated team behind it all." },
       { property: "og:title", content: "About Us — GHSPCA" },
-      { property: "og:description", content: "Our story, mission and the team behind 55,000+ rescues." },
+      { property: "og:description", content: "Our story, mission and the team behind 61,000+ rescues." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -174,7 +174,7 @@ function AboutPage() {
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block bg-card border border-border rounded-3xl p-6 shadow-elegant max-w-sm">
                 <p className="text-xl font-semibold italic text-balance text-foreground">
-                  "Till date, 55,000+ animals and birds are saved and count is increasing daily"
+                  "Till date, 61,000+ animals and birds are saved and count is increasing daily"
                 </p>
               </div>
             </div>
