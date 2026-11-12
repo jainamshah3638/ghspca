@@ -129,7 +129,7 @@ function HeroSlider() {
                   <span className="h-1.5 w-1.5 rounded-full bg-primary-glow animate-pulse" /> {s.eyebrow}
                 </span>
                 <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.05] text-balance">
-                  {s.title}
+                  {s.title}                  
                 </h1>
                 <p className="mt-6 text-lg md:text-xl text-background/85 max-w-xl text-balance">{s.desc}</p>
                 <div className="mt-10 flex flex-wrap gap-3">
