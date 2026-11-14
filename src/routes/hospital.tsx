@@ -88,7 +88,7 @@ function HospitalPage() {
           <Reveal>
             <div className="text-center max-w-2xl mx-auto">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Facility at a glance</p>
-              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">Open to every animal, always.</h2>
+              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">Open to every stray Animal and Birds, Always.</h2>
             </div>
           </Reveal>
           <div className="mt-12 grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -132,42 +132,6 @@ function HospitalPage() {
             ))}
           </div>
           <p className="mt-6 text-center text-xs text-muted-foreground">Images are architectural renders of the hospital under construction.</p>
-        </div>
-      </section>
-
-      {/* Path to opening */}
-      <section className="py-24 md:py-32 bg-cream">
-        <div className="mx-auto max-w-6xl px-5 lg:px-8">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Path to opening</p>
-              <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">Where we are today</h2>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ol className="mt-14 grid gap-6 md:grid-cols-5 md:gap-0 relative md:before:absolute md:before:top-5 md:before:left-[10%] md:before:right-[10%] md:before:h-0.5 md:before:bg-border md:before:content-['']">
-              {milestones.map((m, i) => (
-                <li key={m.label} className="relative flex md:flex-col items-center gap-4 md:gap-3 md:text-center">
-                  <span
-                    className={cn(
-                      "relative z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 text-sm font-semibold",
-                      m.status === "done" && "bg-primary border-primary text-primary-foreground",
-                      m.status === "current" && "bg-card border-primary text-primary ring-4 ring-primary/20",
-                      m.status === "upcoming" && "bg-card border-border text-muted-foreground",
-                    )}
-                  >
-                    {m.status === "done" ? <Check className="h-5 w-5" /> : i + 1}
-                  </span>
-                  <div>
-                    <p className={cn("font-semibold", m.status === "upcoming" ? "text-muted-foreground" : "text-foreground")}>{m.label}</p>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                      {m.status === "done" ? "Completed" : m.status === "current" ? "In progress" : "Upcoming"}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
         </div>
       </section>
     </PageLayout>

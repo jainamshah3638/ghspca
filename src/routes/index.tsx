@@ -80,7 +80,9 @@ const slides = [
   },
   {
     img: multiSpeciality,
-    hideText: true,
+    eyebrow: "Donate to Rescue",
+    title: "Free Stray Animal Treatment.",
+    desc: '100% of your donation goes into food, medicine, surgery and ambulance fuel.',
     duration: 15000, // 15 seconds for Slide 3
   },
 ];
@@ -255,8 +257,6 @@ function MissionStats() {
 
 /* ---------------- Contribute Ways ---------------- */
 const contribute = [
-  { icon: HandHeart, title: "Become a Volunteer", desc: "Join our on-ground rescue and shelter teams.", to: "/contact" },
-  { icon: Heart, title: "Adopt an Animal", desc: "Give a rescued animal a forever home.", to: "/causes" },
   { icon: IndianRupee, title: "Donate", desc: "Fund food, medicine and ambulance fuel.", to: "/donate" },
   { icon: Handshake, title: "Partner Organisation", desc: "Collaborate with us to expand our rescue impact.", to: "/contact" },
 ];
@@ -271,7 +271,19 @@ function ContributeWays() {
             <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-foreground">How you can contribute</h2>
           </div>
         </Reveal>
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-14 grid sm:grid-cols-1 lg:grid-cols-3 gap-5">
+          <Reveal key="Become a Volunteer" delay={0.08}>
+            <a href="https://forms.gle/nF2UiLfKjpgJBxmB6" target="_blank" className="group block h-full bg-card rounded-2xl p-7 border border-border shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all">
+              <span className="grid h-12 w-12 place-items-center rounded-xl bg-secondary text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
+                <HandHeart className="h-5 w-5" />
+              </span>
+              <h3 className="mt-5 text-xl font-semibold text-foreground">Become a Volunteer</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Join our on-ground rescue and shelter teams.</p>
+              <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                Get started <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+              </span>
+            </a>
+          </Reveal>
           {contribute.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.08}>
               <Link to={c.to} className="group block h-full bg-card rounded-2xl p-7 border border-border shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all">
@@ -323,9 +335,9 @@ function HomelessBanner() {
                 <Link to="/donate" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:bg-primary/90 shadow-elegant hover:-translate-y-1 transition-all">
                   Donate Now <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/contact" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-background/15 border border-background/30 px-8 py-4 text-base font-semibold text-background hover:bg-background/25 hover:-translate-y-1 transition-all">
+                <a href="https://forms.gle/nF2UiLfKjpgJBxmB6" target="_blank" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-background/15 border border-background/30 px-8 py-4 text-base font-semibold text-background hover:bg-background/25 hover:-translate-y-1 transition-all">
                   Become a Volunteer
-                </Link>
+                </a>
               </div>
             </div>
 

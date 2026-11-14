@@ -4,12 +4,12 @@ import { Reveal } from "@/components/site/Reveal";
 const domestic = [
   { name: "Pigeons", count: "15,500", emoji: "🕊️" },
   { name: "Cows", count: "12,300", emoji: "🐄" },
-  { name: "Dogs", count: "10,300", emoji: "🐕" },
-  { name: "Bulls", count: "4,800", emoji: "🐂" },
-  { name: "Cats", count: "4,500", emoji: "🐈" },
+  { name: "Pigs", count: "10,300", emoji: "🐕" },
+  { name: "Buffaloes", count: "4,800", emoji: "🐂" },
+  { name: "Dogs", count: "4,500", emoji: "🐈" },
   { name: "Camels", count: "1,400", emoji: "🐪" },
-  { name: "Donkeys", count: "182", emoji: "🫏" },
-  { name: "Horses", count: "173", emoji: "🐎" },
+  { name: "Cats", count: "182", emoji: "🫏" },
+  { name: "Donkeys", count: "173", emoji: "🐎" },
 ];
 
 export function DomesticAnimals() {

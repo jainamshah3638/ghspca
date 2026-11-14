@@ -18,9 +18,9 @@ export const Route = createFileRoute("/donate")({
 });
 
 const schemes = [
-  { icon: Gem, tier: "Diamond", amount: "₹5,51,000", desc: "Premier benefactor — sponsor an entire shelter wing & ongoing care.", accent: "from-primary to-primary-glow" },
-  { icon: Crown, tier: "Platinum", amount: "₹2,51,000", desc: "Underwrite a year of surgeries and life‑saving treatments.", accent: "from-primary to-primary" },
-  { icon: Trophy, tier: "Golden", amount: "₹1,11,000", desc: "Fund the ambulance, fuel and rescue operations for months.", accent: "from-primary to-primary" },
+  { icon: Gem, tier: "Diamond", amount: "₹5,51,000", desc: "Premier benefactor — sponsor an entire shelter wing & ongoing care. For more details...", accent: "from-primary to-primary-glow" },
+  { icon: Crown, tier: "Platinum", amount: "₹2,51,000", desc: "Underwrite a year of surgeries and life‑saving treatments. For more details...", accent: "from-primary to-primary" },
+  { icon: Trophy, tier: "Golden", amount: "₹1,11,000", desc: "Fund the ambulance, fuel and rescue operations for months. For more details...", accent: "from-primary to-primary" },
 ];
 
 function DonatePage() {
@@ -29,7 +29,7 @@ function DonatePage() {
       <PageHero
         eyebrow="Donate"
         title="Your generosity becomes their second chance."
-        subtitle="100% of your donation goes into food, medicine, surgery and ambulance fuel. Every service we provide is free of cost to the public."
+        subtitle="100% of your donation goes into food, medicine, surgery and ambulance fuel. Every service we provide is free of cost to the stray Birds and Animals."
       />
 
       {/* Our Schemes */}
@@ -59,10 +59,10 @@ function DonatePage() {
                   <p className="mt-6 text-4xl font-semibold text-foreground">{s.amount}</p>
                   <p className="mt-3 text-muted-foreground">{s.desc}</p>
                   <a
-                    href="upi://pay?pa=9394578568-1@okbizaxis&pn=GHSPCA&cu=INR"
+                    href="tel:+919394578568"
                     className="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold hover:bg-primary/90 transition"
                   >
-                    Contribute {s.tier}
+                    Contact Us
                   </a>
                 </div>
               </Reveal>
@@ -102,11 +102,11 @@ function DonatePage() {
                   <div>
                     <h3 className="text-xl font-semibold">UPI / GPay</h3>
                     <p className="text-sm text-muted-foreground">Google Pay: <span className="font-medium text-foreground">9394578568</span></p>
-                    <p className="text-sm text-muted-foreground">UPI ID: <span className="font-mono font-medium text-foreground break-all">9394578568-1@okbizaxis</span></p>
+                    <p className="text-sm text-muted-foreground">UPI ID: <span className="font-mono font-medium text-foreground break-all">20261107000160-qrp@cbin</span></p>
                   </div>
                 </div>
                 <div className="mt-6 sm:mt-0 shrink-0">
-                  <a href="upi://pay?pa=9394578568-1@okbizaxis&pn=GHSPCA&cu=INR" className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition shadow-soft hover:shadow-elegant">
+                  <a href="upi://pay?pa=20261107000160-qrp@cbin&pn=GHSPCA&cu=INR" className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition shadow-soft hover:shadow-elegant">
                     Open UPI App
                   </a>
                 </div>
@@ -129,7 +129,13 @@ function DonatePage() {
                   <img src={donateQr} alt="GHSPCA Donation QR Code" className="w-full h-auto rounded-xl block" />
                 </div>
                 <p className="mt-6 text-xs text-primary-foreground/70 text-center">Scan with GPay, PhonePe, Paytm, or BHIM.</p>
-                <p className="mt-4 text-sm font-semibold text-center">Get income tax benefits under Section 80-G</p>
+                <p className="mt-4 text-sm font-semibold text-center">To get income tax benefits under Section 80-G & CSR</p>
+                <a
+                  href="tel:+919394578568"
+                  className="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-full bg-secondary text-primary px-5 py-3 text-sm font-semibold transition"
+                >
+                  Contact Us
+                </a>
               </div>
             </Reveal>
           </div>

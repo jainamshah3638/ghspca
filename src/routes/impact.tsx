@@ -26,11 +26,11 @@ const headline = [
 ];
 
 const timeline = [
-  { year: "2008", title: "GHSPCA founded", desc: "A few animal lovers in Hyderabad come together to respond to street emergencies." },
-  { year: "2012", title: "Network grows", desc: "Volunteers and professionals from different fields join the mission." },
+  { year: "2008", title: "GHSPCA Founded", desc: "A few animal lovers in Hyderabad come together to respond to street emergencies." },
+  { year: "2014", title: "Multi-state Reach", desc: "Started animal rescue operations in other Indian states." },
   { year: "2019", title: "24/7 ambulance launched", desc: "Round-the-clock emergency rescue service begins operating 365 days a year." },
-  { year: "2022", title: "Multi-state reach", desc: "Services expand to Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, UP." },
-  { year: "Today", title: "61,000+ rescues", desc: "And counting. Every single rescue free of cost to the public." },
+  { year: "2026", title: "Hospital Established", desc: "Multi-speciality animal hospital established, with inauguration planned." },
+  { year: "Til Today", title: "61,000+ Rescues", desc: "And counting. Every single rescue free of cost to the public." },
 ];
 
 function ImpactPage() {
@@ -99,7 +99,7 @@ function ImpactPage() {
                     <h3 className="text-2xl font-semibold text-foreground">Expanding Our Wings</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Not just Telangana, but many other states like Andhra Pradesh, Karnataka, Maharashtra, Gujrat, Rajasthan, and Uttar Pradesh have been receiving our services. We keep spreading our wings of service for the future.
+                    Not just Telangana, but many other states like Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, Madhya Pradesh, Uttar Pradesh, Haryana, Jammu & Kashmir, Jharkhand and West Bengal have been receiving our services. We keep spreading our wings of service for the future.
                   </p>
                 </div>
               </Reveal>

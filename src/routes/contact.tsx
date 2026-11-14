@@ -18,7 +18,7 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const whatsappLink = `https://wa.me/919394578568?text=${encodeURIComponent("Hello GHSPCA, I would like to get in touch.")}`;
+const whatsappLink = `https://wa.me/919394578568?text=${encodeURIComponent("Hello GHSPCA Team, Urgent Assistance Required for Bird and Animal Emergency.")}`;
 const instagramChatLink = "https://ig.me/m/ghspca";
 
 export const Route = createFileRoute("/contact")({
@@ -96,7 +96,7 @@ function ContactPage() {
               <ContactItem icon={MapPin} label="Contact Address" value={
                 <span className="text-base font-normal leading-relaxed text-muted-foreground block mt-1">
                   <strong className="text-foreground font-semibold">GREATER HYDERABAD SOCIETY FOR PREVENTION OF CRUELTY TO ANIMALS</strong><br />
-                  9FC9+G96, Muslim Jung Brg, Shakar Bazaar,<br />
+                  Muslim Jung Brg, Shakar Bazaar,<br />
                   Afzal Gunj, Hyderabad, Telangana 500012
                 </span>
               } />

@@ -65,18 +65,22 @@ const members = [
   { name: "Jivesh Jain" },
   { name: "Kruti Shah" },
   { name: "Luvkik Nahata" },
+  { name: "Naman Mutha" },
   { name: "Nehal H" },
-  { name: "Nikhil Achaliya" },
+  { name: "Nikhil Anchaliya" },
   { name: "Pankaj Gupta" },
   { name: "Parth Shah" },
+  { name: "Payal Alizar" },
   { name: "Piyush Gandhi" },
   { name: "Praful Bohra" },
   { name: "Pranav Jain" },
   { name: "Prateek Lodha" },
-  { name: "Sanjay Jain" },
+  { name: "Rushin Shah" },
+  { name: "Sanjay Bhandari" },
   { name: "Shubham Vyas" },
   { name: "Siddhum Bhandari" },
-  { name: "Siksha Jain" },
+  { name: "Shiksha Jain" },
+  { name: "Srikanth Jain" },
   { name: "Sonal Anchaliya" },
   { name: "Sucharita Shah" },
   { name: "Sumeet Zotha" },
@@ -127,8 +131,8 @@ function CoreCard({ m }: { m: typeof teamGHSPCA[0] }) {
 function SmallCard({ name, phone, role }: { name: string; phone?: string; role?: string }) {
   return (
     <article className="bg-card border border-border rounded-2xl p-5 shadow-soft hover:shadow-elegant transition flex items-center gap-4">
-      <div className="h-12 w-12 shrink-0 rounded-xl bg-secondary grid place-items-center">
-        <span className="text-sm font-semibold text-foreground">
+      <div className="h-16 w-16 shrink-0 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/30 grid place-items-center">
+        <span className="text-xl font-semibold text-primary">
           <Initials name={name} />
         </span>
       </div>
@@ -187,7 +191,7 @@ function AboutPage() {
                 Greater Hyderabad Society for Prevention of Cruelty to Animals (GHSPCA) an organization working for welfare of animals was started in 2008 by a few Animal Lovers. Lately, many other conservatives, professionals from different fields joined hands in order to rescue, rehabilitate, release and reduce cruelty on animals.
               </p>
               <p>
-                <strong className="text-foreground font-semibold">Our Impact:</strong> Not just Telangana, but 11 other states — Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, Madhya Pradesh, Uttar Pradesh, Haryana, Jammu & Kashmir, Jharkhand and West Bengal — have been receiving our services. And so we keep spreading our wings of service in future.
+                <strong className="text-foreground font-semibold">Our Impact:</strong> Not just Telangana, but total 12 states — Andhra Pradesh, Karnataka, Maharashtra, Gujarat, Rajasthan, Madhya Pradesh, Uttar Pradesh, Haryana, Jammu & Kashmir, Jharkhand and West Bengal — have been receiving our services. And so we keep spreading our wings of service in future.
               </p>
               <p>
                 Since 2019, we have a 24/7 ambulance service running 365 days for handling emergency cases and rehabilitating animals.

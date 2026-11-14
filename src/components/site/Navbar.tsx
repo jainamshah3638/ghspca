@@ -7,6 +7,7 @@ import logo from "@/assets/logo.png";
 const links = [
   { to: "/", label: "Home", icon: Home },
   { to: "/about", label: "About Us", icon: Info },
+  { to: "/hospital", label: "Hospital Facilities", icon: Home },
   { to: "/impact", label: "Our Impact", icon: Award },
   { to: "/causes", label: "Urgent Causes", icon: HelpCircle },
   { to: "/gallery", label: "Rescue Logs", icon: Award },
