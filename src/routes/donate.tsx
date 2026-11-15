@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Building2, Smartphone, QrCode, Gem, Crown, Trophy } from "lucide-react";
+import { useState } from "react";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
 import donateQr from "@/assets/donate.jpeg";
@@ -24,6 +25,19 @@ const schemes = [
 ];
 
 function DonatePage() {
+  const [copied, setCopied] = useState(false);
+  const text = "20261107000160-qrp@cbin";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Copy failed:", error);
+    }
+  };
+
   return (
     <PageLayout>
       <PageHero
@@ -106,9 +120,9 @@ function DonatePage() {
                   </div>
                 </div>
                 <div className="mt-6 sm:mt-0 shrink-0">
-                  <a href="upi://pay?pa=20261107000160-qrp@cbin&pn=GHSPCA&cu=INR" className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition shadow-soft hover:shadow-elegant">
-                    Open UPI App
-                  </a>
+                  <button onClick={handleCopy} className="inline-flex w-full sm:w-auto justify-center items-center rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition shadow-soft hover:shadow-elegant">
+                    {copied ? "Copied" : "Copy UPI ID"}
+                  </button>
                 </div>
               </div>
             </Reveal>
@@ -123,7 +137,7 @@ function DonatePage() {
                 <h3 className="mt-5 text-2xl font-semibold">Scan & Donate</h3>
                 <div className="mt-4 space-y-2 text-sm text-primary-foreground/90 bg-primary-foreground/10 rounded-2xl p-4">
                   <p className="leading-snug"><strong className="text-primary-foreground font-semibold">Name:</strong><br/>Greater Hyderabad Society for Prevention of Cruelty to Animals</p>
-                  <p><strong className="text-primary-foreground font-semibold">UPI ID:</strong> <span className="font-mono break-all">9394578568-1@okbizaxis</span></p>
+                  <p><strong className="text-primary-foreground font-semibold">UPI ID:</strong> <span className="font-mono break-all">20261107000160-qrp@cbin</span></p>
                 </div>
                 <div className="mt-6 mx-auto bg-background rounded-2xl p-3 shadow-elegant w-full max-w-[220px]">
                   <img src={donateQr} alt="GHSPCA Donation QR Code" className="w-full h-auto rounded-xl block" />

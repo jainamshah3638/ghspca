@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { BackgroundMusic } from "../components/site/BackgroundMusic";
+import HomepagePopup from "../components/site/HomepagePopup";
 
 function NotFoundComponent() {
   return (
@@ -112,6 +113,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <HomepagePopup />
         <Scripts />
       </body>
     </html>

@@ -13,42 +13,71 @@ export function BackgroundMusic() {
   // "declined" → user declined (hide everything)
   const [consent, setConsent] = useState<"unknown" | "accepted" | "declined">("unknown");
 
-  // Read localStorage after mount — also marks the component as ready to render.
-  // Keeping both in one effect guarantees the consent value is correct before
-  // anything is painted, eliminating the banner flash.
-  useEffect(() => {
-    const saved = localStorage.getItem(CONSENT_KEY);
-    if (saved === "accepted" || saved === "declined") {
-      setConsent(saved);
-    }
-    setMounted(true);
-  }, []);
+    useEffect(() => {
+      const audio = new Audio("/nemras-instrumental.mp3");
+      audio.loop = true;
+      audio.volume = 1;
+      audioRef.current = audio;
+
+      const saved = localStorage.getItem(CONSENT_KEY);
+
+      if (saved === "accepted" || saved === "declined") {
+        setConsent(saved);
+
+        if (saved === "accepted") {
+          audio
+            .play()
+            .then(() => setMusicState("playing"))
+            .catch(() => setMusicState("idle"));
+        }
+      }
+
+      setMounted(true);
+
+      return () => {
+        audio.pause();
+        audio.src = "";
+        audioRef.current = null;
+      };
+    }, []);
+
+    useEffect(() => {
+      if (consent !== "accepted") return;
+
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      const startMusic = () => {
+        audio.play()
+          .then(() => {
+            setMusicState("playing");
+            window.removeEventListener("pointerdown", startMusic);
+            window.removeEventListener("keydown", startMusic);
+            window.removeEventListener("touchstart", startMusic);
+          })
+          .catch(() => {
+            setMusicState("idle");
+          });
+      };
+
+      // Attempt automatic playback first
+      startMusic();
+
+      // If browser blocks autoplay, start on the visitor's first interaction
+      window.addEventListener("pointerdown", startMusic);
+      window.addEventListener("keydown", startMusic);
+      window.addEventListener("touchstart", startMusic);
+
+      return () => {
+        window.removeEventListener("pointerdown", startMusic);
+        window.removeEventListener("keydown", startMusic);
+        window.removeEventListener("touchstart", startMusic);
+      };
+    }, [consent]);
+
 
   const [musicState, setMusicState] = useState<State>("idle");
   const [showTooltip, setShowTooltip] = useState(false);
-
-  /* ── Create audio on mount ── */
-  useEffect(() => {
-    const audio = new Audio("/nemras-instrumental.mp3");
-    audio.loop = true;
-    audio.volume = 1;
-    audioRef.current = audio;
-    return () => {
-      audio.pause();
-      audio.src = "";
-    };
-  }, []);
-
-  /* ── If already accepted (returning visitor), try autoplay ── */
-  useEffect(() => {
-    if (consent !== "accepted") return;
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio
-      .play()
-      .then(() => setMusicState("playing"))
-      .catch(() => setMusicState("idle")); // still show button; user can click it
-  }, [consent]);
 
   /* ── Accept handler: save consent + start music ── */
   const handleAccept = () => {
