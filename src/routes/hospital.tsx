@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, Clock, HeartPulse, IndianRupee } from "lucide-react";
+import { Check, Clock, HeartPulse, IndianRupee, Bed, GraduationCap, Ambulance } from "lucide-react";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { cn } from "@/lib/utils";
@@ -28,6 +28,12 @@ const glance = [
   { icon: Clock, value: "24×7 • 365 Days", label: "Operating Hours" },
   { icon: IndianRupee, value: "Free", label: "Cost of Care" },
   { icon: HeartPulse, value: "6", label: "Specialised Departments" },
+  { icon: Ambulance, value: "Ambulance", label: "24×7 • 365 Days" },
+  { icon: Ambulance, value: "50+", label: "Monthly emergency rescues" },
+  { icon: GraduationCap, value: "21", label: "Qualified Veterinary Doctors" },
+  { icon: GraduationCap, value: "4", label: "Qualified Para-Veterinary Team" },
+  { icon: Bed, value: "150+", label: "Beds for Animals" },
+  { icon: Bed, value: "100+", label: "Beds for Birds" },
 ];
 
 const departments = [
