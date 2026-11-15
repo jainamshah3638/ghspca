@@ -9,9 +9,14 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-import cowImg from "@/assets/rescue-cow.jpg";
-import snakeImg from "@/assets/hero-snake.png";
-import kittenImg from "@/assets/rescue-kitten.jpg";
+import Camel from "@/assets/Camel.png";
+import Cows from "@/assets/Cows.png";
+import DogVaccination from "@/assets/Dog_Vaccination.jpg";
+import Dog from '@/assets/Dog.png'
+import Koel from "@/assets/Koel.jpg";
+import Monkey from "@/assets/Monkey.png";
+import Pigeon1 from "@/assets/Pigeon1.jpg";
+import Reptiles from '@/assets/Reptiles.png'
 
 export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
@@ -45,26 +50,42 @@ function GalleryPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Reveal delay={0.1}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={cowImg} alt="Cow Rescue" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white font-medium text-lg">Cattle Rehabilitation</p>
-                </div>
+                <img src={Dog} alt="Dog" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={snakeImg} alt="Snake Rescue" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white font-medium text-lg">Wildlife Emergency Response</p>
-                </div>
+                <img src={Cows} alt="Cows" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={kittenImg} alt="Kitten Rescue" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white font-medium text-lg">Small Animal Care</p>
-                </div>
+                <img src={Camel} alt="Camel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <img src={DogVaccination} alt="DogVaccination" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <img src={Koel} alt="Koel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <img src={Monkey} alt="Monkey" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <img src={Pigeon1} alt="Pigeon1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <img src={Reptiles} alt="Reptiles" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </Reveal>
           </div>

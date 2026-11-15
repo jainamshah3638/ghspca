@@ -1,8 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
-import { blogs } from "@/lib/blogs";
+
+import img8Oct25 from "@/assets/8Oct25.jpg";
+import img10Jan26 from "@/assets/10Jan26.jpg";
+import img11Jan26 from "@/assets/11Jan26.jpg";
+import img22Sep26 from '@/assets/22Sep26.jpeg'
+import img25Jul25 from "@/assets/25Jul25.jpg";
+import img29Mar26 from "@/assets/29Mar26.jpg";
+import img30Sep25 from "@/assets/30Sep25.jpg";
 
 export const Route = createFileRoute("/blog/")({
   component: BlogListingPage,
@@ -29,69 +35,55 @@ function BlogListingPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-[1600px] px-5 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogs.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 0.08}>
-                <article className="group flex flex-col h-full bg-card border border-border rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-                  {/* Card Image */}
-                  <Link to="/blog/$slug" params={{ slug: post.slug }} className="aspect-[16/10] overflow-hidden block">
-                    <img
-                      src={post.img}
-                      alt={post.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </Link>
-
-                  {/* Card Body */}
-                  <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                      {/* Meta Tags */}
-                      <div className="flex flex-wrap items-center gap-3 text-xs mb-4">
-                        <span className="rounded-full bg-secondary text-primary px-3 py-1 font-semibold tracking-wide">
-                          {post.category}
-                        </span>
-                      </div>
-
-                      {/* Title & Excerpt */}
-                      <h3 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                        <Link to="/blog/$slug" params={{ slug: post.slug }}>
-                          {post.title}
-                        </Link>
-                      </h3>
-                      <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                    </div>
-
-                    {/* Footer Info */}
-                    <div className="mt-8 pt-6 border-t border-border flex flex-col gap-4">
-                      <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-muted-foreground font-medium">
-                        <span className="flex items-center gap-1.5">
-                          <User className="h-3.5 w-3.5" />
-                          {post.author}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="h-3.5 w-3.5" />
-                          {post.date}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Clock className="h-3.5 w-3.5" />
-                          {post.readTime}
-                        </span>
-                      </div>
-
-                      <Link
-                        to="/blog/$slug"
-                        params={{ slug: post.slug }}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
-                      >
-                        Read Full Article <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img22Sep26} target="_blank">
+                  <img src={img22Sep26} alt="22Sep26" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img8Oct25} target="_blank">
+                  <img src={img8Oct25} alt="25Jul25" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img29Mar26} target="_blank">
+                  <img src={img29Mar26} alt="29Mar26" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img25Jul25} target="_blank">
+                  <img src={img25Jul25} alt="8Oct25" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img10Jan26} target="_blank">
+                  <img src={img10Jan26} alt="10Jan26" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img11Jan26} target="_blank">
+                  <img src={img11Jan26} alt="11Jan26" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
+                <a href={img30Sep25} target="_blank">
+                  <img src={img30Sep25} alt="30Sep25" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
