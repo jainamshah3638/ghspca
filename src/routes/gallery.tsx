@@ -50,42 +50,58 @@ function GalleryPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Reveal delay={0.1}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Dog} alt="Dog" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Dog} target="_blank">
+                  <img src={Dog} alt="Dog" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Cows} alt="Cows" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Cows} target="_blank">
+                  <img src={Cows} alt="Cows" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Camel} alt="Camel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Camel} target="_blank">
+                  <img src={Camel} alt="Camel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={DogVaccination} alt="DogVaccination" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={DogVaccination} target="_blank">
+                  <img src={DogVaccination} alt="DogVaccination" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Koel} alt="Koel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Koel} target="_blank">
+                  <img src={Koel} alt="Koel" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Monkey} alt="Monkey" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Monkey} target="_blank">
+                  <img src={Monkey} alt="Monkey" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Pigeon1} alt="Pigeon1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Pigeon1} target="_blank">
+                  <img src={Pigeon1} alt="Pigeon1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="group overflow-hidden rounded-3xl aspect-[4/3] bg-muted relative">
-                <img src={Reptiles} alt="Reptiles" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <a href={Reptiles} target="_blank">
+                  <img src={Reptiles} alt="Reptiles" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </a>
               </div>
             </Reveal>
           </div>

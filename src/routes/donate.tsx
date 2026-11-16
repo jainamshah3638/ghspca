@@ -3,7 +3,7 @@ import { Building2, Smartphone, QrCode, Gem, Crown, Trophy } from "lucide-react"
 import { useState } from "react";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { Reveal } from "@/components/site/Reveal";
-import donateQr from "@/assets/donate.jpeg";
+import donateQr from "@/assets/donate.png";
 
 export const Route = createFileRoute("/donate")({
   component: DonatePage,

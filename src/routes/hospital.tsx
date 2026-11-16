@@ -10,6 +10,7 @@ import diagnostics from "@/assets/hospital/diagnostics.jpg";
 import recovery from "@/assets/hospital/recovery.jpg";
 import shelter from "@/assets/hospital/shelter.jpg";
 import pharmacy from "@/assets/hospital/pharmacy.jpg";
+import XrayRoom from "@/assets/hospital/XrayRoom.png";
 
 export const Route = createFileRoute("/hospital")({
   component: HospitalPage,
@@ -43,6 +44,7 @@ const departments = [
   { img: recovery, title: "Recovery Room", desc: "Post-operative and critical care facilities providing close monitoring, recovery support and safe isolation when needed." },
   { img: shelter, title: "Shelter", desc: "Species-specific shelters for birds, animals and wildlife, providing safe spaces for recovery and rehabilitation." },
   { img: pharmacy, title: "Pharmacy", desc: "A fully equipped in-house pharmacy supporting uninterrupted care with essential medicines and supplies." },
+  { img: XrayRoom, title: "XRay Room", desc: "A dedicated X-ray room equipped for advanced diagnostic imaging of animals and birds." },
 ];
 
 const milestones: { label: string; status: "done" | "current" | "upcoming" }[] = [
