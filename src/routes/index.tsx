@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
       { title: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
       { name: "description", content: "Greater Hyderabad Society for Prevention of Cruelty to Animals. 24/7 animal rescue, rehabilitation and release across India since 2019." },
       { property: "og:title", content: "GHSPCA-Greater Hyderabad Society for Prevention of Cruelty to Animals" },
-      { property: "og:description", content: "Since 2019, GHSPCA has rescued 61,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
+      { property: "og:description", content: "Since 2008, GHSPCA has rescued 61,000+ animals across India. Donate, volunteer, or call our 24/7 ambulance." },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -68,7 +68,7 @@ const slides = [
     img: heroDog,
     eyebrow: "24/7 Ambulance Service",
     title: "Every life is worth saving.",
-    desc: "Since 2019, GHSPCA has rescued, rehabilitated and released over 61,000 animals and birds across India — free of cost.",
+    desc: "Since 2008, GHSPCA has rescued, rehabilitated and released over 61,000 animals and birds across India — free of cost.",
     duration: 7000,
   },
   {
