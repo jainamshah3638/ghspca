@@ -2,6 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 
 export const Route = createFileRoute("/privacy")({
+  head: () => ({
+    meta: [
+      { title: "Website Privacy & Data Policy | GHSPCA Hyderabad" },
+      { name: "description", content: "Read GHSPCA's privacy policy to understand how visitor information and personal data are handled and protected." },
+      { property: "og:title", content: "Website Privacy & Data Policy | GHSPCA Hyderabad" },
+      { property: "og:description", content: "Read GHSPCA's privacy policy to understand how visitor information and personal data are handled and protected." },
+    ],
+    links: [{ rel: "canonical", href: "/privacy" }],
+  }),
   component: Privacy,
 });
 

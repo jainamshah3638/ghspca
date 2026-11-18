@@ -8,10 +8,10 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Us — GHSPCA" },
-      { name: "description", content: "Learn about GHSPCA, our rescue efforts, and the dedicated team behind it all." },
-      { property: "og:title", content: "About Us — GHSPCA" },
-      { property: "og:description", content: "Our story, mission and the team behind 61,000+ rescues." },
+      { title: "About Our Animal Rescue NGO | GHSPCA Hyderabad" },
+      { name: "description", content: "Learn about GHSPCA, an animal welfare NGO established in 2008, dedicated to animal rescue, bird protection and welfare initiatives across India." },
+      { property: "og:title", content: "About Our Animal Rescue NGO | GHSPCA Hyderabad" },
+      { property: "og:description", content: "Learn about GHSPCA, an animal welfare NGO established in 2008, dedicated to animal rescue, bird protection and welfare initiatives across India." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),

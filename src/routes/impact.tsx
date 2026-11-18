@@ -9,10 +9,10 @@ export const Route = createFileRoute("/impact")({
   component: ImpactPage,
   head: () => ({
     meta: [
-      { title: "Our Impact — GHSPCA" },
-      { name: "description", content: "61,000+ animals rescued. 18 years of service. Explore GHSPCA's measurable impact for animal welfare in India." },
-      { property: "og:title", content: "Our Impact — GHSPCA" },
-      { property: "og:description", content: "Numbers, animals and milestones from 18 years of rescue work." },
+      { title: "GHSPCA Impact | 55,000+ Animals & Birds Rescued and Treated" },
+      { name: "description", content: "Explore GHSPCA's animal rescue achievements, treatment initiatives, bird protection programmes and welfare activities across multiple states." },
+      { property: "og:title", content: "GHSPCA Impact | 55,000+ Animals & Birds Rescued and Treated" },
+      { property: "og:description", content: "Explore GHSPCA's animal rescue achievements, treatment initiatives, bird protection programmes and welfare activities across multiple states." },
     ],
     links: [{ rel: "canonical", href: "/impact" }],
   }),

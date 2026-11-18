@@ -22,8 +22,10 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
   head: () => ({
     meta: [
-      { title: "Our Work & Gallery — GHSPCA" },
-      { name: "description", content: "Explore the daily rescues, rehabilitations, and releases performed by the GHSPCA team." },
+      { title: "Real Animal Rescue Cases & Success Stories | GHSPCA" },
+      { name: "description", content: "Explore real animal rescue stories, injured bird recoveries, emergency operations and rehabilitation efforts by the GHSPCA rescue team." },
+      { property: "og:title", content: "Real Animal Rescue Cases & Success Stories | GHSPCA" },
+      { property: "og:description", content: "Explore real animal rescue stories, injured bird recoveries, emergency operations and rehabilitation efforts by the GHSPCA rescue team." },
     ],
   }),
 });

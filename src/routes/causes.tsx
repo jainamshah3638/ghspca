@@ -11,10 +11,10 @@ export const Route = createFileRoute("/causes")({
   component: CausesPage,
   head: () => ({
     meta: [
-      { title: "Causes — GHSPCA" },
-      { name: "description", content: "Snake rescues, camel and cattle slaughter prevention, bird kite-string injuries — the urgent causes GHSPCA tackles." },
-      { property: "og:title", content: "Causes — GHSPCA" },
-      { property: "og:description", content: "Causes you can support today." },
+      { title: "Animal Welfare Causes | Bird & Wildlife Protection | GHSPCA" },
+      { name: "description", content: "Discover important animal welfare causes and learn how GHSPCA works to protect vulnerable animals, birds and wildlife through rescue and awareness." },
+      { property: "og:title", content: "Animal Welfare Causes | Bird & Wildlife Protection | GHSPCA" },
+      { property: "og:description", content: "Discover important animal welfare causes and learn how GHSPCA works to protect vulnerable animals, birds and wildlife through rescue and awareness." },
     ],
     links: [{ rel: "canonical", href: "/causes" }],
   }),

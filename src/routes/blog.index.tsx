@@ -14,10 +14,10 @@ export const Route = createFileRoute("/blog/")({
   component: BlogListingPage,
   head: () => ({
     meta: [
-      { title: "Stories & Care Blog — GHSPCA" },
-      { name: "description", content: "Actionable tips, behind-the-scenes animal rescue stories, and scientific welfare guides from Greater Hyderabad Society for Prevention of Cruelty to Animals." },
-      { property: "og:title", content: "Stories & Care Blog — GHSPCA" },
-      { property: "og:description", content: "Read our latest news, rescue logs, and animal welfare guides." },
+      { title: "Animal Welfare Blog | Animal Rescue & Bird Care Tips – GHSPCA" },
+      { name: "description", content: "Read informative articles about stray animal care, bird protection, animal rescue, wildlife awareness and compassionate animal welfare practices." },
+      { property: "og:title", content: "Animal Welfare Blog | Animal Rescue & Bird Care Tips – GHSPCA" },
+      { property: "og:description", content: "Read informative articles about stray animal care, bird protection, animal rescue, wildlife awareness and compassionate animal welfare practices." },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
   }),

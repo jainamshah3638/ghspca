@@ -9,10 +9,10 @@ export const Route = createFileRoute("/donate")({
   component: DonatePage,
   head: () => ({
     meta: [
-      { title: "Donate — GHSPCA" },
-      { name: "description", content: "Donate to GHSPCA via UPI, bank transfer or QR code. Every contribution funds rescues, medicine and 24/7 ambulance care." },
-      { property: "og:title", content: "Donate — GHSPCA" },
-      { property: "og:description", content: "UPI, bank and QR — your donation goes directly to animal care." },
+      { title: "Donate to Animal Welfare NGO in Hyderabad | GHSPCA" },
+      { name: "description", content: "Every contribution makes a difference. Donate to GHSPCA to support injured stray animals and birds, rescue operations, veterinary care and compassionate animal welfare initiatives." },
+      { property: "og:title", content: "Donate to Animal Welfare NGO in Hyderabad | GHSPCA" },
+      { property: "og:description", content: "Every contribution makes a difference. Donate to GHSPCA to support injured stray animals and birds, rescue operations, veterinary care and compassionate animal welfare initiatives." },
     ],
     links: [{ rel: "canonical", href: "/donate" }],
   }),

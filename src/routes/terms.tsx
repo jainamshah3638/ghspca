@@ -2,6 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 
 export const Route = createFileRoute("/terms")({
+  head: () => ({
+    meta: [
+      { title: "GHSPCA Website Terms & Legal Information" },
+      { name: "description", content: "Review the website usage guidelines, terms, responsibilities and conditions applicable to visitors of the official GHSPCA website." },
+      { property: "og:title", content: "GHSPCA Website Terms & Legal Information" },
+      { property: "og:description", content: "Review the website usage guidelines, terms, responsibilities and conditions applicable to visitors of the official GHSPCA website." },
+    ],
+    links: [{ rel: "canonical", href: "/terms" }],
+  }),
   component: Terms,
 });
 

@@ -25,10 +25,10 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — GHSPCA" },
-      { name: "description", content: "Reach GHSPCA Hyderabad — 24/7 rescue line, email and office address." },
-      { property: "og:title", content: "Contact — GHSPCA" },
-      { property: "og:description", content: "Get in touch with the GHSPCA team." },
+      { title: "GHSPCA Contact Details | Animal Rescue & Emergency Help" },
+      { name: "description", content: "Contact GHSPCA Hyderabad to report injured stray animals and birds, request rescue assistance or learn about our animal welfare initiatives." },
+      { property: "og:title", content: "GHSPCA Contact Details | Animal Rescue & Emergency Help" },
+      { property: "og:description", content: "Contact GHSPCA Hyderabad to report injured stray animals and birds, request rescue assistance or learn about our animal welfare initiatives." },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
