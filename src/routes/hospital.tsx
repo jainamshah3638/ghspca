@@ -31,10 +31,10 @@ const glance = [
   { icon: HeartPulse, value: "6", label: "Specialised Departments" },
   { icon: Ambulance, value: "Ambulance", label: "24×7 • 365 Days" },
   { icon: Ambulance, value: "50+", label: "Monthly emergency rescues" },
-  { icon: GraduationCap, value: "21", label: "Qualified Veterinary Doctors" },
-  { icon: GraduationCap, value: "4", label: "Qualified Para-Veterinary Team" },
-  { icon: Bed, value: "150+", label: "Beds for Animals" },
-  { icon: Bed, value: "100+", label: "Beds for Birds" },
+  { icon: Ambulance, value: "300+", label: "Monthly rescues" },
+  { icon: GraduationCap, value: "21", label: "Veterinary Doctors, Para-Veterinary Team Etc." },
+  { icon: Bed, value: "100+", label: "Beds for Animals" },
+  { icon: Bed, value: "150+", label: "Beds for Birds" },
 ];
 
 const departments = [
@@ -42,7 +42,7 @@ const departments = [
   { img: surgery, title: "Surgery", desc: "A sterile theatre equipped for repair, surgeries, sterilisation and other critical procedures." },
   { img: diagnostics, title: "Diagnostics & Imaging", desc: "Dedicated X-ray and laboratory services for timely and accurate clinical assessment." },
   { img: recovery, title: "Recovery Room", desc: "Post-operative and critical care facilities providing close monitoring, recovery support and safe isolation when needed." },
-  { img: shelter, title: "Shelter", desc: "Species-specific shelters for birds, animals and wildlife, providing safe spaces for recovery and rehabilitation." },
+  { img: shelter, title: "Recovery Shelter", desc: "Species-specific shelters for birds, animals and wildlife, providing safe spaces for recovery and rehabilitation." },
   { img: pharmacy, title: "Pharmacy", desc: "A fully equipped in-house pharmacy supporting uninterrupted care with essential medicines and supplies." },
   { img: XrayRoom, title: "XRay Room", desc: "A dedicated X-ray room equipped for advanced diagnostic imaging of animals and birds." },
 ];
